@@ -4,6 +4,12 @@
     margin: 16px 17px 16px 24px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .header {
+        margin: 0 13px;
+    }
+}
+
 .header__button {
     min-width: 48px;
     height: 48px;
@@ -14,6 +20,17 @@
     background-position: center;
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .header__button {
+        min-width: 28px;
+        height: 28px;
+        background-image: url(../../images/burgermobile.svg);
+        background-size: 28px 28px;
+        border: none;
+        margin: 14px 0;
+    }
 }
 
 .header__header {
@@ -29,6 +46,15 @@
     margin: 0 32px 0 16px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__header {
+        font-size: 26px;
+        letter-spacing: 0.52px;
+        min-width: 198px;
+        margin: 11px 4px 21px 20px;
+    }
+}
+
 .header__search {
     display: flex;
     flex-direction: row;
@@ -39,9 +65,17 @@
     background: rgba(255, 255, 255, 0.20);
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399.9px){
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
     .header__search {
         width: 594px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__search {
+        background: none;
+        width: 57px;
+        height: 48px;
     }
 }
 
@@ -60,9 +94,15 @@
     line-height: 24px; /* 133.333% */
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399.9px){
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
     .header__search-input {
         width: 522px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__search-input {
+        display: none;
     }
 }
 
@@ -90,6 +130,15 @@
     cursor: pointer;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__search-button {
+        margin: 14px 13px 14px 16px;
+        width: 28px;
+        height: 28px;
+        background-image: url(../../images/Searchmobile.svg);
+    }
+}
+
 .header__link {
     width: 56px;
     height: 56px;
@@ -103,6 +152,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 123.077% */
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__link  {
+        display: none;
+    }
 }
 
 .header__link_profile {
