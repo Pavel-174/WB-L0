@@ -1,0 +1,22 @@
+.header__button {
+    min-width: 48px;
+    height: 48px;
+    background-image: url(../../../images/burgermenu.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 28px 24px;
+    background-position: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .header__button {
+        min-width: 28px;
+        height: 28px;
+        background-image: url(../../../images/burgermobile.svg);
+        background-size: 28px 28px;
+        border: none;
+        margin: 14px 0;
+    }
+}

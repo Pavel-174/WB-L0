@@ -1,0 +1,21 @@
+.header__header {
+    color: rgba(255, 255, 255, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 85.714% */
+    font-variant: all-small-caps;
+    letter-spacing: 0.56px;
+    min-width: 106px;
+    margin: 0 32px 0 16px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {    
+    .header__header {
+        font-size: 26px;
+        letter-spacing: 0.52px;
+        min-width: 198px;
+        margin: 11px 4px 21px 20px;
+    }
+}
