@@ -1,0 +1,78 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: 16px 24px;
+}
+
+.header__button {
+    width: 48px;
+    height: 48px;
+    background-image: url(../../images/burgermenu.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 28px 24px;
+    background-position: center;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.header__header {
+    color: rgba(255, 255, 255, 1);
+    font-family: Segoe UI;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 85.714% */
+    font-variant: all-small-caps;
+    letter-spacing: 0.56px;
+    width: 106px;
+    margin: 0 32px 0 16px;
+}
+
+.header__search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 970px;
+    height: 48px;
+    border-radius: 36px;
+    background: rgba(255, 255, 255, 0.20);
+}
+
+.header__search_input {
+    padding: 0;
+    width: 898px;
+    height: 24px;
+    margin: 0px 8px 0px 20px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+}
+
+.header__search_input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Segoe UI;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+}
+
+.header__search_button {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url(../../images/Search.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: 28px 24px;
+    background-position: center;
+    border: none;
+    margin: 0 20px 0 0;
+    cursor: pointer;
+}

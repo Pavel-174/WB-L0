@@ -1,6 +1,6 @@
 @import url(../vendor/normalize.css);
 
-/* @import url(../fonts/); */
+@import url(../fonts/SegoeUI.css);
 
 @import url(../blocks/root/root.css);
 
