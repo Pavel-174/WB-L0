@@ -76,3 +76,61 @@
     margin: 0 20px 0 0;
     cursor: pointer;
 }
+
+.header__link {
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 1);
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+}
+
+.header__link_profile {
+    margin-left: 32.5px;
+}
+
+.header__link_bucket {
+    margin-left: 43px;
+}
+
+.header__span {
+    display: block;
+    height: 28px;
+    position: relative; 
+    background-position: center;
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+}
+
+.header__span_profile {
+    background-image: url(../../images/icon-28.svg);
+}
+
+.header__span_bucket {
+    background-image: url(../../images/icon-29.svg);
+}
+
+.header__span-number {
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    right: -4px;
+    padding: 0 2px;
+    width: 12px;
+    background-color: rgba(245, 81, 35, 1);
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 180% */
+}
