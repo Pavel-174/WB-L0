@@ -1,7 +1,13 @@
 .header {
     display: flex;
     flex-direction: row;
-    margin: 16px 24px;
+    margin: 16px 17px 16px 24px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px){
+    header {
+        
+    }
 }
 
 .header__button {
@@ -97,7 +103,7 @@
 }
 
 .header__link_bucket {
-    margin-left: 43px;
+    margin-left: 40px;
 }
 
 .header__span {
@@ -106,24 +112,24 @@
     position: relative; 
     background-size: 28px 28px;
     background-repeat: no-repeat;
-    padding-top: 10px;
+    padding-bottom: 6px;
 }
 
 .header__span_profile {
     background-image: url(../../images/icon-28.svg);
-    background-position: 15px;
+    background-position: 13px -2px;
 }
 
 .header__span_bucket {
     background-image: url(../../images/icon-29.svg);
-    background-position: 10px;
+    background-position: 10px -2px;
 }
 
 .header__span-number {
     display: inline-block;
     position: absolute;
-    top: -3px;
-    right: 6px;
+    top: -8px;
+    right: 7px;
     padding: 0 2px;
     width: 12px;
     background-color: rgba(245, 81, 35, 1);
