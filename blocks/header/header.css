@@ -39,7 +39,7 @@
     background: rgba(255, 255, 255, 0.20);
 }
 
-.header__search_input {
+.header__search-input {
     padding: 0;
     width: 898px;
     height: 24px;
@@ -54,7 +54,7 @@
     line-height: 24px; /* 133.333% */
 }
 
-.header__search_input::placeholder {
+.header__search-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
     font-family: Segoe UI;
     font-size: 18px;
@@ -63,7 +63,7 @@
     line-height: 24px; /* 133.333% */
 }
 
-.header__search_button {
+.header__search-button {
     padding: 0;
     width: 24px;
     height: 24px;
