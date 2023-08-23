@@ -4,14 +4,8 @@
     margin: 16px 17px 16px 24px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399.9px){
-    header {
-        
-    }
-}
-
 .header__button {
-    width: 48px;
+    min-width: 48px;
     height: 48px;
     background-image: url(../../images/burgermenu.svg);
     background-repeat: no-repeat;
@@ -31,7 +25,7 @@
     line-height: 24px; /* 85.714% */
     font-variant: all-small-caps;
     letter-spacing: 0.56px;
-    width: 106px;
+    min-width: 106px;
     margin: 0 32px 0 16px;
 }
 
@@ -43,6 +37,12 @@
     height: 48px;
     border-radius: 36px;
     background: rgba(255, 255, 255, 0.20);
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px){
+    .header__search {
+        width: 594px;
+    }
 }
 
 .header__search-input {
@@ -59,6 +59,13 @@
     font-weight: 400;
     line-height: 24px; /* 133.333% */
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px){
+    .header__search-input {
+        width: 522px;
+    }
+}
+
 
 .header__search-input::placeholder {
     color: rgba(255, 255, 255, 0.5);
@@ -129,7 +136,7 @@
     display: inline-block;
     position: absolute;
     top: -8px;
-    right: 7px;
+    right: 3px;
     padding: 0 2px;
     width: 12px;
     background-color: rgba(245, 81, 35, 1);
