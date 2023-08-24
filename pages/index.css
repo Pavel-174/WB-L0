@@ -21,5 +21,7 @@
 
 @import url(../blocks/main/main.css);
 
+@import url(../blocks/basket/basket.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

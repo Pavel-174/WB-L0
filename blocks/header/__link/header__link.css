@@ -11,6 +11,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 123.077% */
+    text-decoration: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1023.9px) {    
