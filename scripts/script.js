@@ -1,6 +1,7 @@
 const template = document.querySelector ('#template');
 const cardList = document.querySelector ('.basket__cards');
 
+// создание карточек товаров
 function createCard (element) {
     const item = template.content.cloneNode(true);
     const itemImage = item.querySelector ('.basket__image');
@@ -37,3 +38,12 @@ function renderCard(element) {
 cards.forEach ((element) => {
     renderCard (element);
 });
+
+// Вставка даанных в хэдер корзины(колличкство товаров)
+let result = cards.filter(card => card.quantity > 0);
+
+function renderSpanNumber(result) {
+    document.querySelector ('.header__span-number').textContent = result.length
+}
+
+renderSpanNumber(result);
