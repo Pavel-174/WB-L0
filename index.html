@@ -39,19 +39,7 @@
                 </label>
                 <span class="basket__check-text">Выбрать все</span>
             </div>
-            <ul>
-                <li>
-                    <label class="basket__label">
-                        <input class="basket__checkbox" type="checkbox" value="1" name="k">
-                        <span></span>
-                    </label>
-                    <img src="" alt=""></img>
-                    <div>
-                        <h6></h6>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </li>
+            <ul class="basket__cards">
             </ul>
         </div>
     </section>
@@ -59,5 +47,27 @@
     <footer class="footer">
         <p class="footer__copyright">© 2022  ООО «Товары и точка»</p>
     </footer>
+    <template id="template">
+        <li class="basket__card">
+            <label class="basket__label basket__label_card">
+                <input class="basket__checkbox" type="checkbox" value="1" name="k">
+                <span></span>
+            </label>
+            <img class="basket__image" src="./images/Frame 3853.jpg" alt=""></img>
+            <div class="basket__card-info">
+                <h6 class="basket__card-header"></h6>
+                <div class="basket__card-box">
+                    <span class="basket__color"></span>
+                    <span class="basket__size">Размер:</span>
+                </div>
+                <div class="basket__card-box_2">
+                    <span class="basket__storage"></span>
+                    <span class="basket__seller"></span>
+                </div>
+            </div>
+        </li>
+    </template>
+    <script src="./scripts/cards.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>

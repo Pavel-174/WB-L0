@@ -25,7 +25,11 @@
     height: 22px;
     display: block; 
     position: relative;
-   }
+}
+
+.basket__label_card {
+    margin: 0 12px 0 0;
+}
 
 .basket__checkbox {
     display: none;
@@ -52,4 +56,38 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     margin-left: 11px;
+}
+
+.basket__cards {
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 891px;
+}
+
+.basket__card {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 11px;
+}
+
+.basket__card-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket__card-header {
+    margin: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.basket__card-box_2 {
+    display: flex;
+    flex-direction: column;
 }
