@@ -91,3 +91,12 @@
     display: flex;
     flex-direction: column;
 }
+
+.basket__button-box {
+
+}
+
+.basket__quantity-box {
+    display: flex;
+    flex-direction: row;
+}

@@ -1,4 +1,4 @@
-const cards = [
+const initialCards = [
     {
         id: 1,
         name: "Футболка UZcotton мужская",
