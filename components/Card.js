@@ -9,6 +9,9 @@ export default class Card {
       this._seller = data.seller;
       this._buyQuantity = data.buyQuantity;
       this._quantity = data.quantity;
+      this._price = data.price;
+      this._fullPrice = data.fullPrice
+      this._id = data.id
       this._cardSelector = cardSelector;
     }
   
@@ -19,7 +22,7 @@ export default class Card {
         .querySelector('.basket__card')
         .cloneNode(true);
   
-      this._element = cardElement;
+      this._quantity == 0 ? "" : this._element = cardElement;
     }
   
     //Установка слушателей
@@ -48,6 +51,7 @@ export default class Card {
   
     // кнопка Удаления карточек
     _deleteCard() {
+      initialCards = initialCards.filter( item  =>  item.id != this._id);
       this._element.remove();
       this._element = null;
     }
@@ -80,6 +84,8 @@ export default class Card {
       this._cardStorage = this._element.querySelector('.basket__storage');
       this._cardSeller = this._element.querySelector('.basket__seller');
       this._cardQuantity = this._element.querySelector('.basket__buy-quantity');
+      this._cardPrice = this._element.querySelector('.basket__price');
+      this._cardFullPrice = this._element.querySelector('.basket__full-price');
   
       this._cardImage.src = this._link;
       this._cardImage.alt = this._title;
@@ -91,6 +97,8 @@ export default class Card {
       this._cardQuantity.textContent = this._buyQuantity;
       this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
       this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
+      this._cardPrice.textContent = this._price;
+      this._cardFullPrice.textContent = this._fullPrice;
 
       this._setEventListeners();
   
