@@ -54,12 +54,16 @@ export default class Card {
 
     _incrementQuantity() {
       this._buyQuantity = this._buyQuantity + 1;
+      this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
+      this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
       this._cardQuantity.textContent = this._buyQuantity;
     }
 
     _decrementQuantity() {
-        this._buyQuantity = this._buyQuantity - 1;
-        this._cardQuantity.textContent = this._buyQuantity;
+      this._buyQuantity = this._buyQuantity - 1;
+      this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
+      this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
+      this._cardQuantity.textContent = this._buyQuantity;
     }
   
     generateCard() {
