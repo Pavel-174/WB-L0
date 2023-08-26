@@ -100,3 +100,24 @@
     display: flex;
     flex-direction: row;
 }
+
+.basket__like {
+    background: url(../../images/icon-20.svg) no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.basket__like_active {
+    background: url(../../images/Union.svg) no-repeat;
+}
+
+.basket__increment_inactive {
+
+}
+
+.basket__decrement_inactive {
+    
+}

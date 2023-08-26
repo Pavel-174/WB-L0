@@ -1,6 +1,6 @@
 const initialCards = [
     {
-        id: 1,
+        id: 3,
         name: "Футболка UZcotton мужская",
         color: "белый",
         size: "56",
@@ -8,7 +8,8 @@ const initialCards = [
         seller: "OOO Вайлдберриз",
         image: "./images/Frame3853.jpg",
         price: "522",
-        quantity: "2",
+        quantity: 2,
+        buyQuantity: 1,
     },
     {
         id: 2,
@@ -20,9 +21,10 @@ const initialCards = [
         image: "./images/Frame277132129.jpg",
         price: "2 100 047",
         quantity: "2",
+        buyQuantity: 200,
     },
     {
-        id: 2,
+        id: 1,
         name: "Футболка UZcotton мужская",
         color: "белый",
         size: "",
@@ -30,6 +32,7 @@ const initialCards = [
         seller: "OOO Вайлдберриз",
         image: "./images/Frame277132128.jpg",
         price: "494",
-        quantity: "1",
+        quantity: 1,
+        buyQuantity: 1,
     },
 ]
