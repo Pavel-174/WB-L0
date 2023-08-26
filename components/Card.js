@@ -56,18 +56,22 @@ export default class Card {
       this._element = null;
     }
 
-    _incrementQuantity() {
-      this._buyQuantity = this._buyQuantity + 1;
+    // активное и неактивное состояние у кнопок + и-
+    _togleButtonsCondition() {
       this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
       this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
+    }
+
+    _incrementQuantity() {
+      this._buyQuantity = this._buyQuantity + 1;
       this._cardQuantity.textContent = this._buyQuantity;
+      this._togleButtonsCondition();
     }
 
     _decrementQuantity() {
       this._buyQuantity = this._buyQuantity - 1;
-      this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
-      this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
       this._cardQuantity.textContent = this._buyQuantity;
+      this._togleButtonsCondition();
     }
   
     generateCard() {
@@ -95,10 +99,10 @@ export default class Card {
       this._cardStorage.textContent = this._storage;
       this._cardSeller.textContent = this._seller;
       this._cardQuantity.textContent = this._buyQuantity;
-      this._buyQuantity == this._quantity ? this._incrementButton.disabled = true : this._incrementButton.disabled = false;
-      this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
       this._cardPrice.textContent = this._price;
       this._cardFullPrice.textContent = this._fullPrice;
+
+     this. _togleButtonsCondition();
 
       this._setEventListeners();
   
