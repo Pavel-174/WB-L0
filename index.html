@@ -34,7 +34,7 @@
             <h2 class="basket__header">Корзина</h2>
             <div class="basket__check-all">
                 <label class="basket__label">
-                    <input class="basket__checkbox" type="checkbox" value="1" name="k">
+                    <input class="basket__checkbox" type="checkbox" value="1" id="selectAll">
                     <span></span>
                 </label>
                 <span class="basket__check-text">Выбрать все</span>
@@ -44,6 +44,9 @@
             <ul class="basket__cards-missed"></ul>
         </div>
     </section>
+    <section class="payment">
+
+    </section>
 </main>
     <footer class="footer">
         <p class="footer__copyright">© 2022  ООО «Товары и точка»</p>
@@ -51,10 +54,10 @@
     <template id="template">
         <li class="basket__card">
             <label class="basket__label basket__label_card">
-                <input class="basket__checkbox" type="checkbox" value="1" name="k">
+                <input class="basket__checkbox" type="checkbox" name="checkbox">
                 <span></span>
             </label>
-            <img class="basket__image" src="#" alt="#"></img>
+            <img class="basket__image" src="#" alt="#">
             <div class="basket__card-info">
                 <h6 class="basket__card-header"></h6>
                 <div class="basket__card-box">
@@ -86,7 +89,7 @@
     </template>
     <template id="template2">
         <li class="basket__card">
-            <img class="basket__image basket__image_missed" src="#" alt="#"></img>
+            <img class="basket__image basket__image_missed" src="#" alt="#">
             <div class="basket__card-info basket__card-info_missed">
                 <h6 class="basket__card-header"></h6>
                 <div class="basket__card-box">

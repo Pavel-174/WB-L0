@@ -63,3 +63,12 @@ function renderMissedItemNumber(quantity) {
 }
 
 renderMissedItemNumber(quantity);
+
+//переключатель чекбоксов (чекбокс выбрать все)
+
+document.getElementById('selectAll').onclick = function() {
+  const checkboxes = document.getElementsByName('checkbox');
+  for (const checkbox of checkboxes) {
+      checkbox.checked = this.checked;
+  }
+}
