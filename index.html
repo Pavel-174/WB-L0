@@ -39,8 +39,9 @@
                 </label>
                 <span class="basket__check-text">Выбрать все</span>
             </div>
-            <ul class="basket__cards">
-            </ul>
+            <ul class="basket__cards"></ul>
+            <h3 class="basket__missed-items"></h3>
+            <ul class="basket__cards-missed"></ul>
         </div>
     </section>
 </main>
@@ -53,7 +54,7 @@
                 <input class="basket__checkbox" type="checkbox" value="1" name="k">
                 <span></span>
             </label>
-            <img class="basket__image" src="./images/Frame 3853.jpg" alt=""></img>
+            <img class="basket__image" src="#" alt="#"></img>
             <div class="basket__card-info">
                 <h6 class="basket__card-header"></h6>
                 <div class="basket__card-box">
@@ -67,19 +68,37 @@
             </div>
             <div class="basket__button-box">
                 <div class="basket__quantity-box">
-                    <button class="basket__decrement">−</button>
-                    <span class="basket__buy-quantity">3</span>
-                    <button class="basket__increment">+</button>
+                    <button class="basket__quantity-btn basket__quantity-btn__decrement">−</button>
+                    <span class="basket__buy-quantity"></span>
+                    <button class="basket__quantity-btn basket__quantity-btn__increment">+</button>
                 </div>
-                <span></span>
-                <div>
+                <text class="basket__mistake"></text>
+                <div  class="basket__like-box">
                     <button class="basket__like"></button>
-                    <button class="basket__delete">Delete</button>
+                    <button class="basket__delete"></button>
                 </div>
             </div>
-            <div>
+            <div class="basket__price-box">
                 <span class="basket__price"></span>
                 <span class="basket__full-price"></span>
+            </div>
+        </li>
+    </template>
+    <template id="template2">
+        <li class="basket__card">
+            <img class="basket__image basket__image_missed" src="#" alt="#"></img>
+            <div class="basket__card-info basket__card-info_missed">
+                <h6 class="basket__card-header"></h6>
+                <div class="basket__card-box">
+                    <span class="basket__color"></span>
+                    <span class="basket__size"></span>
+                </div>
+            </div>
+            <div class="basket__button-box">
+                <div  class="basket__like-box">
+                    <button class="basket__like"></button>
+                    <button class="basket__delete"></button>
+                </div>
             </div>
         </li>
     </template>

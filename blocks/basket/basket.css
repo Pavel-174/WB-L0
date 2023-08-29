@@ -21,14 +21,14 @@
 }
 
 .basket__label {
-    width: 22px;
+    min-width: 22px;
     height: 22px;
     display: block; 
     position: relative;
 }
 
 .basket__label_card {
-    margin: 0 12px 0 0;
+    margin: 49.5px 12px 0 0;
 }
 
 .basket__checkbox {
@@ -64,27 +64,95 @@
     width: 891px;
 }
 
+.basket__cards-missed {
+    width: 891px;
+    padding: 0;
+}
+
 .basket__card {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+.basket__card:first-child {
+    margin-top: 16px;
 }
 
 .basket__card-info {
     display: flex;
     flex-direction: column;
+    margin: 12px 268px 0 16px;
+    width: 275px;
+    height: auto;
+}
+
+.basket__card-info_missed {
+    margin: 12px 302px 0 16px;
 }
 
 .basket__card-header {
     margin: 0;
     color: rgba(0, 0, 0, 1);
-    font-family: Segoe UI;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
+    width: 275px;
+}
+
+.basket__color {
+    color: rgba(0, 0, 0, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    width: 275px;
+}
+
+.basket__size {
+    color: rgba(0, 0, 0, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    width: 275px;
+}
+
+.basket__storage {
+    color: rgba(160, 160, 164, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    width: 275px;
+}
+
+.basket__seller {
+    color: rgba(160, 160, 164, 1);
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    width: 275px;
+}
+
+.basket__image {
+    width: 72px;
+    height: 96px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    margin-top: 12px;
+}
+
+.basket__image_missed {
+    filter: grayscale(100%);
 }
 
 .basket__card-box_2 {
@@ -92,13 +160,60 @@
     flex-direction: column;
 }
 
-/* .basket__button-box {
-
-} */
+.basket__button-box {
+    margin: 9px 16px 0 0;
+}
 
 .basket__quantity-box {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    width: 100px;
+    height: 44px;
+    margin-bottom: 8px;
+}
+
+.basket__quantity-btn {
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 120% */
+    letter-spacing: -0.2px;
+    width: 24px;
+    padding: 2px 7px 6px 8px;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.basket__quantity-btn:disabled {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.basket__buy-quantity {
+    width: 44px;
+    height: 23px;
+    color: rgba(0, 0, 0, 1);
+    text-align: center;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+}
+
+.basket__like-box {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+    width: 100px;
 }
 
 .basket__like {
@@ -108,8 +223,65 @@
     width: 20px;
     height: 20px;
     border: none;
+    margin-right: 16px;
 }
 
 .basket__like_active {
     background: url(../../images/Union.svg) no-repeat;
+}
+
+.basket__delete {
+    background: url(../../images/bin.svg) no-repeat;
+    background-position: center;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.basket__price-box {
+    margin-top: 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 120px;
+    width: 100%;
+}
+
+.basket__price {
+    color: rgba(0, 0, 0, 1);
+    text-align: right;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+    letter-spacing: -0.2px;
+}
+
+.basket__full-price {
+    color: rgba(160, 160, 164, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+    text-decoration: line-through;
+}
+
+.basket__mistake {
+    color: rgba(245, 81, 35, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+}
+
+.basket__inactive-card {
+
+}
+
+.basket__mised-items {
+
 }
