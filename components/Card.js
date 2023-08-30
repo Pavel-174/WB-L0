@@ -12,6 +12,7 @@ export default class Card {
       this._price = data.price;
       this._fullPrice = data.fullPrice
       this._id = data.id
+      this._checked = data._checked
       this._cardSelector = cardSelector;
     }
   
@@ -42,7 +43,17 @@ export default class Card {
       this._quantity > 0 ? this._decrementButton.addEventListener('click', () => {
         this._decrementQuantity();
       }) : null;
+
+      this._quantity > 0 ? this._checkbox.addEventListener('click', () => {
+        this._checkboxTumbler();
+      }) : null;
     }
+
+    //чекбокс
+    _checkboxTumbler() {
+      this._checkbox.checked == true ? this._checked = true : this._checked = false;
+      console.log(this._checked)
+  }
   
     // кнопка like
     _likeCard() {
@@ -101,6 +112,7 @@ export default class Card {
       this._cardPrice = this._element.querySelector('.basket__price');
       this._cardFullPrice = this._element.querySelector('.basket__full-price');
       this._cardMistake =  this._element.querySelector('.basket__mistake');
+      this._checkbox = this._element.querySelector('.basket__checkbox');
   
       this._cardImage.src = this._link;
       this._cardImage.alt = this._title;

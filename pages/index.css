@@ -23,5 +23,7 @@
 
 @import url(../blocks/basket/basket.css);
 
+@import url(../blocks/delivery/delivery.css);
+
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

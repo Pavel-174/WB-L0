@@ -11,6 +11,7 @@ let initialCards = [
         fullPrice: "950 сом",
         quantity: 0,
         buyQuantity: 1,
+        checked: false,
     },
     {
         id: 5,
@@ -24,6 +25,7 @@ let initialCards = [
         fullPrice: "2 300 047 сом",
         quantity: "0",
         buyQuantity: 200,
+        checked: false,
     },
     {
         id: 4,
@@ -37,6 +39,7 @@ let initialCards = [
         fullPrice: "1051 сом",
         quantity: 0,
         buyQuantity: 1,
+        checked: false,
     },
     {
         id: 3,
@@ -50,6 +53,7 @@ let initialCards = [
         fullPrice: "1051 сом",
         quantity: 2,
         buyQuantity: 1,
+        checked: true,
     },
     {
         id: 2,
@@ -63,6 +67,7 @@ let initialCards = [
         fullPrice: "2 300 047 сом",
         quantity: "201",
         buyQuantity: 200,
+        checked: true,
     },
     {
         id: 1,
@@ -76,5 +81,6 @@ let initialCards = [
         fullPrice: "950 сом",
         quantity: 1,
         buyQuantity: 1,
+        checked: true,
     },
 ]

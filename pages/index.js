@@ -62,11 +62,17 @@ function renderMissedItemNumber(quantity) {
 
 renderMissedItemNumber(quantity);
 
-//переключатель чекбоксов (чекбокс выбрать все)
+//переключатель чекбоксов (чекбокс выбрать все) Чекбокс вызывает событие onClick у всех чекбоксов. Само событие onClick обрабатывается в классе Card
 
-document.getElementById('selectAll').onclick = function() {
-  const checkboxes = document.getElementsByName('checkbox');
+const mainCheckbox = document.getElementById('selectAll');
+const checkboxes = document.getElementsByName('checkbox');
+
+mainCheckbox.onclick = function() {
   for (const checkbox of checkboxes) {
-      checkbox.checked = this.checked;
+    let evt = document.createEvent("HTMLEvents"); 
+    
+    checkbox.checked = this.checked;
+    evt.initEvent('click', true, true ); 
+    checkbox.dispatchEvent(evt);
   }
 }
