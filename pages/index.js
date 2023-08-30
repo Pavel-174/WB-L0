@@ -4,6 +4,8 @@ import Section from "../components/Section.js";
 
 const activeCardList = '.basket__cards';
 const inactiveCardList = '.basket__cards-missed';
+let result = initialCards.filter(card => card.quantity > 0);
+let quantity = initialCards.filter(card => card.quantity == 0);
 
 const createActiveCard = (item) => {
   const activeCard = new Card(item, "#template");
@@ -46,8 +48,6 @@ inactiveCards.renderItems();
 
 // Вставка даанных в хэдер корзины(колличкство товаров)
 
-let result = initialCards.filter(card => card.quantity > 0);
-
 function renderSpanNumber(result) {
   document.querySelector ('.header__span-number').textContent = result.length
 }
@@ -55,8 +55,6 @@ function renderSpanNumber(result) {
 renderSpanNumber(result);
 
 //Вставка колличества отсутствующих товаров
-
-let quantity = initialCards.filter(card => card.quantity == 0);
 
 function renderMissedItemNumber(quantity) {
   document.querySelector ('.basket__missed-items').textContent = "Отсутствуют · " + quantity.length + " товара"

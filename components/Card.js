@@ -59,7 +59,11 @@ export default class Card {
       this._element = null;
       
       document.querySelector ('.header__span-number').textContent = result.length;
-      quantity.length == 0 ? document.querySelector ('.basket__missed-items').textContent = " " : document.querySelector ('.basket__missed-items').textContent = "Отсутствуют · " + quantity.length + " товара";      
+      quantity.length == 0 ? 
+      ( document.querySelector ('.basket__missed-items').textContent = " " ) : 
+      ( document.querySelector ('.basket__missed-items').textContent = "Отсутствуют · " + quantity.length + " товара" ); 
+      
+      result.length == 0 ? document.querySelector ('.basket__check-all').classList.add('basket__check-all_hide') : null;
     }
 
     // активное и неактивное состояние у кнопок + и-
