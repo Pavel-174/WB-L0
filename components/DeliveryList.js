@@ -41,12 +41,8 @@ export default class DeliveryList {
       this._getTemplate();
   
       this._date = this._element.querySelector('.delivery__date');
-      this.activeCardList = this._element.querySelector('.basket__cards');
-      this.deliveryList = this._element.querySelector('.delivery__cards');
 
       this._date.textContent = this._title;
-
-      this._cardImage = this._element.querySelector('.delivery__image');
 
       this._createImages();
   

@@ -1,3 +1,4 @@
+import { deliveryCards } from "../pages/index.js";
 
 export default class Card {
     constructor(data, cardSelector) {
@@ -65,6 +66,8 @@ export default class Card {
       initialCards = initialCards.filter( item  =>  item.id != this._id);
       let result = initialCards.filter(card => card.quantity > 0);
       let quantity = initialCards.filter(card => card.quantity == 0);
+
+      this._element.id = initialCards.id ? initialCards.filter(card => card.id != this._element.id) : null;
       
       this._element.remove();
       this._element = null;
@@ -75,6 +78,12 @@ export default class Card {
       ( document.querySelector ('.basket__missed-items').textContent = "Отсутствуют · " + quantity.length + " товара" ); 
       
       result.length == 0 ? document.querySelector('.basket__check-all').classList.add('basket__check-all_hide') : null;
+
+      const arr = document.querySelectorAll('.delivery__card')
+      arr.forEach(element => {
+        element.remove();
+      });
+      deliveryCards.renderItems();
     }
 
     // активное и неактивное состояние у кнопок + и-
