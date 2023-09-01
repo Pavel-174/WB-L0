@@ -53,8 +53,7 @@ export default class Card {
     //чекбокс
     _checkboxTumbler() {
       this._checkbox.checked == true ? this._checked = true : this._checked = false;
-      console.log(this._checked)
-  }
+    }
   
     // кнопка like
     _likeCard() {
@@ -83,6 +82,7 @@ export default class Card {
       arr.forEach(element => {
         element.remove();
       });
+
       deliveryCards.renderItems();
     }
 
