@@ -16,7 +16,7 @@ export default class DeliveryList {
 
     _createCard(initialCards) {
       this.liEl = document.createElement('li')
-      this.liEl.setAttribute('class', 'delivery__card')
+      this.liEl.setAttribute('class', 'delivery__card-image')
     
       this.imageEl = document.createElement('img')
       this.imageEl.setAttribute('class', 'delivery__image')
@@ -42,9 +42,9 @@ export default class DeliveryList {
   
       this._date = this._element.querySelector('.delivery__date');
 
-      this._date.textContent = this._title;
-
       this._createImages();
+
+      this._element.querySelectorAll('.delivery__image').length > 0 ? this._date.textContent = this._title : null;
   
       return this._element;
     }

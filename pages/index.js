@@ -10,7 +10,7 @@ const deliveryList = '.delivery__cards';
 let result = initialCards.filter(card => card.quantity > 0);
 let quantity = initialCards.filter(card => card.quantity == 0);
 
-//сортировка массива по уникальному значению
+//сортировка массива по уникальному значению дат доставки
 
 let dates = initialCards.map(item => item.deliveryDate);
 let dates2 = initialCards.map(item => item.deliveryDate2);
@@ -119,6 +119,11 @@ mainCheckbox.onclick = function() {
     evt.initEvent('click', true, true ); 
     checkbox.dispatchEvent(evt);
   }
-  document.querySelector('.delivery__card').remove();
+  const arr = document.querySelectorAll('.delivery__card')
+  arr.forEach(element => {
+    element.remove();
+    element = null;
+  });
+
   deliveryCards.renderItems();
 }

@@ -29,6 +29,7 @@
         </a>
     </header>
 <main class="main">
+
     <section class="basket">
         <div class="basket__basket">
             <h2 class="basket__header">Корзина</h2>
@@ -44,6 +45,7 @@
             <ul class="basket__cards-missed"></ul>
         </div>
     </section>
+
     <section class="delivery">
         <div class="delivery__header-box">
             <h3 class="delivery__header">Способ доставки</h3>
@@ -89,6 +91,7 @@
             </div>
         </div>        
     </section>
+
     <section class="payment">
         <div class="payment__header-box">
             <h3 class="payment__header">Способ оплаты</h3>
@@ -114,12 +117,35 @@
         </div>
         <text class="payment__text">Спишем оплату с карты при получении</text>
     </section>
+
     <section class="buyer">
         <h3 class="buyer__header">Получатель</h3>
-        <div>
+        <div class="buyer__box">
             <div class="buyer__input-box">
                 <label>Имя</label>
-                <input class="buyer__input" type="text" placeholder="Имя">
+                <input class="buyer__input" type="text">
+                <span></span>
+            </div>
+            <div class="buyer__input-box">
+                <label>Фамилия</label>
+                <input class="buyer__input" type="text">
+                <span></span>
+            </div>
+        </div>
+        <div class="buyer__box">
+            <div class="buyer__input-box">
+                <label>Электронная почта</label>
+                <input class="buyer__input" type="text">
+                <span></span>
+            </div>
+            <div class="buyer__input-box">
+                <label>Телефон</label>
+                <input class="buyer__input" type="text">
+                <span></span>
+            </div>
+            <div class="buyer__input-box">
+                <label>ИНН</label>
+                <input class="buyer__input" type="text">
                 <span></span>
             </div>
         </div>
@@ -128,6 +154,7 @@
     <footer class="footer">
         <p class="footer__copyright">© 2022  ООО «Товары и точка»</p>
     </footer>
+
     <template id="template">
         <li class="basket__card">
             <label class="basket__label basket__label_card">
@@ -164,6 +191,7 @@
             </div>
         </li>
     </template>
+
     <template id="template2">
         <li class="basket__card">
             <img class="basket__image basket__image_missed" src="#" alt="#">
@@ -182,6 +210,7 @@
             </div>
         </li>
     </template>
+
     <template id="template3">
         <li class="delivery__card">
             <div class="delivery__box">
@@ -193,6 +222,7 @@
             </div>
         </li>
     </template>
+
     <script src="./utils/cards.js"></script>
     <script type="module" src="./pages/index.js"></script>
 </body>

@@ -11,9 +11,11 @@ export default class Card {
       this._buyQuantity = data.buyQuantity;
       this._quantity = data.quantity;
       this._price = data.price;
-      this._fullPrice = data.fullPrice
-      this._id = data.id
-      this._checked = data._checked
+      this._fullPrice = data.fullPrice;
+      this._id = data.id;
+      this._checked = data.checked;
+      this._deliveryDate = data.deliveryDate;
+      this._deliveryDate2 = data.deliveryDate2;
       this._cardSelector = cardSelector;
     }
   
@@ -53,6 +55,34 @@ export default class Card {
     //чекбокс
     _checkboxTumbler() {
       this._checkbox.checked == true ? this._checked = true : this._checked = false;
+
+      const index = initialCards.findIndex((el) => el.id === this._id);
+
+      initialCards[index] = {
+        id: this._id,
+        name: this._title,
+        color: this._color,
+        size: this._size,
+        storage: this._storage,
+        seller:  this._seller,
+        image: this._link,
+        price: this._price,
+        fullPrice: this._fullPrice,
+        quantity: this._quantity,
+        buyQuantity: this._buyQuantity,
+        checked: this._checked,
+        deliveryDate: this._deliveryDate,
+        deliveryDate2: this._deliveryDate2,
+      };
+      initialCards;
+
+      const arr = document.querySelectorAll('.delivery__card')
+      arr.forEach(element => {
+        element.remove();
+        element = null;
+      });
+
+      deliveryCards.renderItems();
     }
   
     // кнопка like
@@ -81,6 +111,7 @@ export default class Card {
       const arr = document.querySelectorAll('.delivery__card')
       arr.forEach(element => {
         element.remove();
+        element = null;
       });
 
       deliveryCards.renderItems();
