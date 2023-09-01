@@ -40,3 +40,31 @@
     line-height: 24px; /* 150% */
     cursor: pointer;
 }
+
+.payment__box {
+    width: 843px;
+}
+
+.payment__span {
+    color: var(--text-black, #000);
+    font-family: Segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin-left: 9px;
+}
+
+.payment__span_2 {
+    margin-left: 12px;
+}
+
+.payment__text {
+    width: 843px;
+    color: var(--system-gray, #A0A0A4);
+    font-family: Segoe UI;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 123.077% */
+}
