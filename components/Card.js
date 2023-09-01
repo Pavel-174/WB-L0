@@ -74,7 +74,7 @@ export default class Card {
       ( document.querySelector ('.basket__missed-items').textContent = " " ) : 
       ( document.querySelector ('.basket__missed-items').textContent = "Отсутствуют · " + quantity.length + " товара" ); 
       
-      result.length == 0 ? document.querySelector ('.basket__check-all').classList.add('basket__check-all_hide') : null;
+      result.length == 0 ? document.querySelector('.basket__check-all').classList.add('basket__check-all_hide') : null;
     }
 
     // активное и неактивное состояние у кнопок + и-

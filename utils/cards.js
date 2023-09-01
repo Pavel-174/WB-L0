@@ -12,6 +12,8 @@ let initialCards = [
         quantity: 0,
         buyQuantity: 1,
         checked: false,
+        deliveryDate: '',
+        deliveryDate2: '',
     },
     {
         id: 5,
@@ -26,6 +28,8 @@ let initialCards = [
         quantity: "0",
         buyQuantity: 200,
         checked: false,
+        deliveryDate: '',
+        deliveryDate2: '',
     },
     {
         id: 4,
@@ -40,6 +44,8 @@ let initialCards = [
         quantity: 0,
         buyQuantity: 1,
         checked: false,
+        deliveryDate: '',
+        deliveryDate2: '',
     },
     {
         id: 3,
@@ -54,6 +60,8 @@ let initialCards = [
         quantity: 2,
         buyQuantity: 1,
         checked: true,
+        deliveryDate: '5—6 февраля',
+        deliveryDate2: '',
     },
     {
         id: 2,
@@ -68,6 +76,8 @@ let initialCards = [
         quantity: "201",
         buyQuantity: 200,
         checked: true,
+        deliveryDate: '5—6 февраля',
+        deliveryDate2: '6—7 февраля',
     },
     {
         id: 1,
@@ -82,5 +92,7 @@ let initialCards = [
         quantity: 1,
         buyQuantity: 1,
         checked: true,
+        deliveryDate: '5—6 февраля',
+        deliveryDate2: '',
     },
 ]
