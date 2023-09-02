@@ -122,30 +122,30 @@
         <h3 class="buyer__header">Получатель</h3>
         <div class="buyer__box">
             <div class="buyer__input-box">
-                <label>Имя</label>
-                <input class="buyer__input" type="text">
+                <label class="buyer__label">Имя</label>
+                <input class="buyer__input buyer__input_name" type="text">
                 <span></span>
             </div>
-            <div class="buyer__input-box">
-                <label>Фамилия</label>
-                <input class="buyer__input" type="text">
+            <div class="buyer__input-box ">
+                <label class="buyer__label">Фамилия</label>
+                <input class="buyer__input buyer__input_name" type="text">
                 <span></span>
             </div>
         </div>
         <div class="buyer__box">
             <div class="buyer__input-box">
-                <label>Электронная почта</label>
-                <input class="buyer__input" type="text">
+                <label class="buyer__label">Электронная почта</label>
+                <input class="buyer__input buyer__input_contacts" type="text">
                 <span></span>
             </div>
             <div class="buyer__input-box">
-                <label>Телефон</label>
-                <input class="buyer__input" type="text">
+                <label class="buyer__label">Телефон</label>
+                <input class="buyer__input buyer__input_contacts" type="text">
                 <span></span>
             </div>
             <div class="buyer__input-box">
-                <label>ИНН</label>
-                <input class="buyer__input" type="text">
+                <label class="buyer__label">ИНН</label>
+                <input class="buyer__input buyer__input_contacts" type="text">
                 <span></span>
             </div>
         </div>
@@ -157,37 +157,45 @@
 
     <template id="template">
         <li class="basket__card">
-            <label class="basket__label basket__label_card">
-                <input class="basket__checkbox" type="checkbox" name="checkbox" checked="true">
-                <span></span>
-            </label>
-            <img class="basket__image" src="#" alt="#">
-            <div class="basket__card-info">
-                <h6 class="basket__card-header"></h6>
-                <div class="basket__card-box">
-                    <span class="basket__color"></span>
-                    <span class="basket__size"></span>
-                </div>
-                <div class="basket__card-box_2">
-                    <span class="basket__storage"></span>
-                    <span class="basket__seller"></span>
-                </div>
-            </div>
-            <div class="basket__button-box">
-                <div class="basket__quantity-box">
-                    <button class="basket__quantity-btn basket__quantity-btn__decrement">−</button>
-                    <span class="basket__buy-quantity"></span>
-                    <button class="basket__quantity-btn basket__quantity-btn__increment">+</button>
-                </div>
-                <text class="basket__mistake"></text>
-                <div  class="basket__like-box">
-                    <button class="basket__like"></button>
-                    <button class="basket__delete"></button>
+            <div class="basket__box">
+                <label class="basket__label basket__label_card">
+                    <input class="basket__checkbox" type="checkbox" name="checkbox" checked="true">
+                    <span></span>
+                </label>
+                <img class="basket__image" src="#" alt="#">
+                <div class="basket__card-info">
+                    <div class="basket__price-box basket__price-box_small">
+                        <span class="basket__price basket__price_small"></span>
+                        <span class="basket__full-price basket__full-price_small"></span>
+                    </div>
+                    <h6 class="basket__card-header"></h6>
+                    <div class="basket__card-box">
+                        <span class="basket__color"></span>
+                        <span class="basket__size"></span>
+                    </div>
+                    <div class="basket__card-box_2">
+                        <span class="basket__storage"></span>
+                        <span class="basket__seller"></span>
+                    </div>
                 </div>
             </div>
-            <div class="basket__price-box">
-                <span class="basket__price"></span>
-                <span class="basket__full-price"></span>
+            <div class="basket__box">
+                <div class="basket__button-box">
+                    <div class="basket__quantity-box">
+                        <button class="basket__quantity-btn basket__quantity-btn__decrement">−</button>
+                        <span class="basket__buy-quantity"></span>
+                        <button class="basket__quantity-btn basket__quantity-btn__increment">+</button>
+                    </div>
+                    <text class="basket__mistake"></text>
+                    <div  class="basket__like-box">
+                        <button class="basket__like"></button>
+                        <button class="basket__delete"></button>
+                    </div>
+                </div>
+                <div class="basket__price-box basket__price-box_big">
+                    <span class="basket__price basket__price_big"></span>
+                    <span class="basket__full-price basket__full-price_big"></span>
+                </div>
             </div>
         </li>
     </template>

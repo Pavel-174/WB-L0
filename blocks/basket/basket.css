@@ -2,14 +2,15 @@
 
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
-
-}
-
-
 .basket {
     margin: 0 24px;
     padding: 24px 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket {
+        margin: 0 16px;
+    }
 }
 
 .basket__header {
@@ -42,6 +43,15 @@
 
 .basket__label_card {
     margin: 49.5px 12px 0 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__label_card  {
+        margin: 0;
+        position: absolute;
+        top: 16px;
+        left: 4px;
+    }
 }
 
 .basket__checkbox {
@@ -83,6 +93,13 @@
     }
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__cards {
+        border-top: none;
+        width: 288px;
+    }
+}
+
 .basket__cards-missed {
     width: 891px;
     padding: 0;
@@ -101,6 +118,26 @@
     margin-bottom: 20px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.basket__box {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__box:nth-child(2) {
+        margin-top: 20px;
+    }
+}
+
 .basket__card:first-child {
     margin-top: 16px;
 }
@@ -116,6 +153,14 @@
 @media screen and (min-width: 1024px) and (max-width: 1399.9px) {
     .basket__card-info {
         margin: 12px 17px 0 16px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__card-info {
+        margin: 0;
+        padding-left: 16px;
+        max-width: 192px;
     }
 }
 
@@ -138,6 +183,18 @@
     font-weight: 400;
     line-height: 24px; /* 150% */
     width: 275px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__card-header {
+        max-width: 192px;
+        color: var(--text-black, #000);
+        font-family: Segoe UI;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+    }
 }
 
 .basket__color {
@@ -188,6 +245,13 @@
     margin-top: 12px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__image {
+        width: 80px;
+        height: 106px;
+    }
+}
+
 .basket__image_missed {
     filter: grayscale(100%);
 }
@@ -201,6 +265,14 @@
     margin: 9px 16px 0 0;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__button-box {
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 .basket__quantity-box {
     display: flex;
     flex-direction: row;
@@ -210,6 +282,12 @@
     width: 100px;
     height: 44px;
     margin-bottom: 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__button-box {
+       width: 80px;
+    }
 }
 
 .basket__quantity-btn {
@@ -246,11 +324,25 @@
     line-height: 24px; /* 150% */
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__like-box {
+        width: 88px;
+        align-self: center;
+    }
+}
+
 .basket__like-box {
     display: flex;
     justify-content: flex-end;
     margin-top: 8px;
     width: 100px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__like-box {
+        width: 88px;
+        align-self: center;
+    }
 }
 
 .basket__like {
@@ -277,12 +369,31 @@
 }
 
 .basket__price-box {
-    margin-top: 9px;
     display: flex;
+    margin-top: 9px;
     flex-direction: column;
     align-items: flex-end;
     min-width: 120px;
     width: 100%;
+}
+
+.basket__price-box_small {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__price-box_small {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .basket__price-box_big {
+        display: none;
+    }
+    
 }
 
 .basket__price {
@@ -296,6 +407,13 @@
     letter-spacing: -0.2px;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__price {
+        font-size: 16px;
+        line-height: 24px; /* 150% */
+    }
+}
+
 .basket__full-price {
     color: rgba(160, 160, 164, 1);
     font-family: Segoe UI, Arial, Helvetica, sans-serif;
@@ -306,6 +424,12 @@
     text-decoration: line-through;
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__full-price  {
+        margin-left: 5px;
+    }
+}
+
 .basket__mistake {
     color: rgba(245, 81, 35, 1);
     font-family: Segoe UI, Arial, Helvetica, sans-serif;
@@ -313,4 +437,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 123.077% */
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__mistake  {
+        margin: 0 24px 0 16px;
+        min-width: 88px;
+        align-self: center;
+    }
 }

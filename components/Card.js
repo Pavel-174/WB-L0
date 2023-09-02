@@ -151,6 +151,8 @@ export default class Card {
       this._cardQuantity = this._element.querySelector('.basket__buy-quantity');
       this._cardPrice = this._element.querySelector('.basket__price');
       this._cardFullPrice = this._element.querySelector('.basket__full-price');
+      this._cardPriceBig = this._element.querySelector('.basket__price_big');
+      this._cardFullPriceBig = this._element.querySelector('.basket__full-price_big');
       this._cardMistake =  this._element.querySelector('.basket__mistake');
       this._checkbox = this._element.querySelector('.basket__checkbox');
   
@@ -164,6 +166,8 @@ export default class Card {
       this._quantity > 0 ? this._cardQuantity.textContent = this._buyQuantity : null;
       this._quantity > 0 ? this._cardPrice.textContent = this._price : null;
       this._quantity > 0 ? this._cardFullPrice.textContent = this._fullPrice : null;
+      this._quantity > 0 ? this._cardPriceBig.textContent = this._price : null;
+      this._quantity > 0 ? this._cardFullPriceBig.textContent = this._fullPrice : null;
       this._quantity > 0 ? ( this._quantity < 5 ? this._cardMistake.textContent = "Осталось " + this._quantity + " шт." : this._cardMistake === null ) : null; 
 
       this._quantity > 0 ? this. _toggleButtonsCondition() : null;

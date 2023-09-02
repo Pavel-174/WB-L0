@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: row;
     gap: 24px;
+    width: 843px;
 }
 
 .buyer__input-box {
@@ -37,4 +38,12 @@
     height: 24px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.buyer__input_name {
+    width: 338px;
+}
+
+.buyer__input_contacts {
+    width: 217.3px;
 }
