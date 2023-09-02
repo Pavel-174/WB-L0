@@ -22,6 +22,12 @@
     width: 843px;
 }
 
+.buyer__box {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
 .buyer__input-box {
     display: flex;
     flex-direction: column;

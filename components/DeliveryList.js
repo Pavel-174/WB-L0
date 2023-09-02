@@ -44,8 +44,8 @@ export default class DeliveryList {
 
       this._createImages();
 
-      this._element.querySelectorAll('.delivery__image').length > 0 ? this._date.textContent = this._title : null;
+      this._date.textContent = this._title;
   
-      return this._element;
+      return this._element.querySelectorAll('.delivery__image').length > 0 ? this._element : "";
     }
   }
