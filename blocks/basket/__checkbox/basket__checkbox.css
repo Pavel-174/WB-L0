@@ -1,0 +1,16 @@
+.basket__checkbox {
+    display: none;
+}
+
+.basket__checkbox + span {
+    position: absolute;
+    left: 0; top: 2px;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/checkbox.svg) no-repeat;
+    cursor: pointer;
+}
+
+.basket__checkbox:checked + span {
+    background-position: 0 -22px;
+}

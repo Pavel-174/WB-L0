@@ -1,0 +1,4 @@
+.basket__check-all {
+    display: flex;
+    flex-direction: row;
+}

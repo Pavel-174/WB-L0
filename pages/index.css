@@ -22,6 +22,45 @@
 @import url(../blocks/main/main.css);
 
 @import url(../blocks/basket/basket.css);
+@import url(../blocks/basket/__header/basket__header.css);
+@import url(../blocks/basket/__check-all/basket__check-all.css);
+@import url(../blocks/basket/__check-all/_hide/basket__check-all_hide.css);
+@import url(../blocks/basket/__image-box/basket__image-box.css);
+@import url(../blocks/basket/__size-small/basket__size-small.css);
+@import url(../blocks/basket/__size-small/_hidden/basket__size-small_hidden.css);
+@import url(../blocks/basket/__label/basket__label.css);
+@import url(../blocks/basket/__label/_card/basket__label_card.css);
+@import url(../blocks/basket/__checkbox/basket__checkbox.css);
+@import url(../blocks/basket/__check-text/basket__check-text.css);
+@import url(../blocks/basket/__cards/basket__cards.css);
+@import url(../blocks/basket/__cards-missed/basket__cards-missed.css);
+@import url(../blocks/basket/__card/basket__card.css);
+@import url(../blocks/basket/__box/basket__box.css);
+@import url(../blocks/basket/__card-info/basket__card-info.css);
+@import url(../blocks/basket/__card-info/_missed/basket__card-info_missed.css);
+@import url(../blocks/basket/__card-header/basket__card-header.css);
+@import url(../blocks/basket/__color/basket__color.css);
+@import url(../blocks/basket/__size/basket__size.css);
+@import url(../blocks/basket/__storage/basket__storage.css);
+@import url(../blocks/basket/__seller/basket__seller.css);
+@import url(../blocks/basket/__image/basket__image.css);
+@import url(../blocks/basket/__image/_missed/basket__image_missed.css);
+@import url(../blocks/basket/__card-box2/basket__card-box2.css);
+@import url(../blocks/basket/__button-box/basket__button-box.css);
+@import url(../blocks/basket/__quantity-box/basket__quantity-box.css);
+@import url(../blocks/basket/__quantity-btn/basket__quantity-btn.css);
+@import url(../blocks/basket/__buy-quantity/basket__buy-quantity.css);
+@import url(../blocks/basket/__like-box/basket__like-box.css);
+@import url(../blocks/basket/__like-box/_missed/basket__like-box_missed.css);
+@import url(../blocks/basket/__like/basket__like.css);
+@import url(../blocks/basket/__like/_active/basket__like_active.css);
+@import url(../blocks/basket/__delete/basket__delete.css);
+@import url(../blocks/basket/__price-box/basket__price-box.css);
+@import url(../blocks/basket/__price-box/_big/basket__price-box_big.css);
+@import url(../blocks/basket/__price-box/_small/basket__price-box_small.css);
+@import url(../blocks/basket/__price/basket__price.css);
+@import url(../blocks/basket/__full-price/basket__full-price.css);
+@import url(../blocks/basket/__mistake/basket__mistake.css);
 
 @import url(../blocks/delivery/delivery.css);
 

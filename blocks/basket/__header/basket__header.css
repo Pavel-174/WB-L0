@@ -1,0 +1,11 @@
+.basket__header {
+    color: rgba(0, 0, 0, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 36px; /* 128.571% */
+    letter-spacing: -0.28px;
+    padding: 10px 0 27px 0;
+    margin: 0;
+}

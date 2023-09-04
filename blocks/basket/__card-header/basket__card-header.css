@@ -1,0 +1,26 @@
+.basket__card-header {
+    margin: 0;
+    color: rgba(0, 0, 0, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    width: 275px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__card-header {
+        max-width: 192px;
+        max-height: 40px;
+        color: rgba(0, 0, 0, 1);
+        font-family: Segoe UI, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
+    }
+}
