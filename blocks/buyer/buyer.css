@@ -18,6 +18,12 @@
     margin: 16px 32px 0 24px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .buyer {
+        width: 638px;
+    }
+}
+
 .buyer__header {
     color: rgba(0, 0, 0, 1);
     font-family: Segoe UI;
@@ -29,11 +35,23 @@
     width: 843px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .buyer__header {
+        width: 590px;
+    }
+}
+
 .buyer__box {
     display: flex;
     flex-direction: row;
     gap: 24px;
     width: 843px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .buyer__box {
+        width: 590px;
+    }
 }
 
 .buyer__input-box {
@@ -51,7 +69,18 @@
     width: 338px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .buyer__input_name {
+        width: 283px;
+    }
+}
 
 .buyer__input_contacts {
     width: 217.3px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .buyer__input_contacts {
+        width: 180.6px;
+    }
 }
