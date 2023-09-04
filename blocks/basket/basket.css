@@ -34,11 +34,44 @@
     display: none;
 }
 
+.basket-image-box {
+    position: relative;
+}
+
+.basket__size-small {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__size-small {
+        display: block;
+        position: absolute;
+        left: 4px;
+        top: 88px;
+        color: rgba(0, 0, 0, 1);
+        text-align: center;
+        font-family: Segoe UI;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        width: 22px;
+        height: 22px;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 6px;
+    }
+    
+    .basket__size-small_hidden {
+        display: none;
+    }
+}
+
 .basket__label {
     min-width: 22px;
     height: 22px;
     display: block; 
     position: relative;
+    z-index: 2;
 }
 
 .basket__label_card {
@@ -60,7 +93,7 @@
 
 .basket__checkbox + span {
     position: absolute;
-    left: 0; top: 0;
+    left: 0; top: 2px;
     width: 100%;
     height: 100%;
     background: url(../../images/checkbox.svg) no-repeat;
@@ -108,6 +141,12 @@
 @media screen and (min-width: 1024px) and (max-width: 1399.9px) {
     .basket__cards-missed {
         width: 640px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__cards-missed {
+        width: 288px;
     }
 }
 
@@ -174,6 +213,12 @@
     }
 }
 
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__card-info_missed {
+        margin: 12px 0 0 0;
+    }
+}
+
 .basket__card-header {
     margin: 0;
     color: rgba(0, 0, 0, 1);
@@ -188,12 +233,16 @@
 @media screen and (min-width: 320px) and (max-width: 1023.9px) {
     .basket__card-header {
         max-width: 192px;
+        max-height: 40px;
         color: var(--text-black, #000);
         font-family: Segoe UI;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 20px; /* 142.857% */
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow:hidden;
     }
 }
 
@@ -215,6 +264,12 @@
     font-weight: 400;
     line-height: 16px; /* 123.077% */
     width: 275px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .basket__size {
+        display: none;
+    }
 }
 
 .basket__storage {
@@ -328,6 +383,10 @@
     .basket__like-box {
         width: 88px;
         align-self: center;
+    }
+
+    .basket__like-box_missed {
+        min-width: 288px;
     }
 }
 

@@ -145,6 +145,7 @@ export default class Card {
       this._cardImage = this._element.querySelector('.basket__image');
       this._cardHeader = this._element.querySelector('.basket__card-header');
       this._cardSize = this._element.querySelector('.basket__size');
+      this._cardSizeSmall = this._element.querySelector('.basket__size-small');
       this._cardColor = this._element.querySelector('.basket__color');
       this._cardStorage = this._element.querySelector('.basket__storage');
       this._cardSeller = this._element.querySelector('.basket__seller');
@@ -160,6 +161,7 @@ export default class Card {
       this._cardImage.alt = this._title;
       this._cardHeader.textContent = this._title;
       this._size == "" ? this._cardSize === null : this._cardSize.textContent = "Размер:" + this._size;
+      this._quantity > 0 ? (this._size == "" ? this._cardSizeSmall.classList.add('basket__size-small_hidden') : this._cardSizeSmall.textContent = this._size) : null;
       this._color == "" ? this._cardColor === null : this._cardColor.textContent = "Цвет:" + this._color;
       this._quantity > 0 ? this._cardStorage.textContent = this._storage : null;
       this._quantity > 0 ? this._cardSeller.textContent = this._seller : null;
