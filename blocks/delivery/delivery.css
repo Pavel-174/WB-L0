@@ -102,6 +102,10 @@
     gap: 8px;
 }
 
+.delivery__card-image {
+    position: relative;
+}
+
 .delivery__image {
     width: 40px;
     height: 56px;
@@ -119,4 +123,26 @@
 
 .delivery__free {
     color: rgba(12, 180, 119, 1);
+}
+
+.delivery__quantity {
+    display: inline-block;
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    padding: 0 2px;
+    width: 12px;
+    background-color: rgba(245, 81, 35, 1);
+    border-radius: 16px;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    font-family: Segoe UI;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px; /* 180% */
+}
+
+.delivery__quantity_hidden {
+    display: none;
 }

@@ -1,5 +1,5 @@
 .basket__delete {
-    background: url(../../images/bin.svg) no-repeat;
+    background: url(../../../images/bin.svg) no-repeat;
     background-position: center;
     cursor: pointer;
     width: 20px;

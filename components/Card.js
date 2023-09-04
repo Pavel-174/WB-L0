@@ -161,7 +161,7 @@ export default class Card {
       this._cardImage.alt = this._title;
       this._cardHeader.textContent = this._title;
       this._size == "" ? this._cardSize === null : this._cardSize.textContent = "Размер:" + this._size;
-      this._quantity > 0 ? (this._size == "" ? this._cardSizeSmall.classList.add('basket__size-small_hidden') : this._cardSizeSmall.textContent = this._size) : null;
+      this._size == "" ? this._cardSizeSmall.classList.add('basket__size-small_hidden') : this._cardSizeSmall.textContent = this._size;
       this._color == "" ? this._cardColor === null : this._cardColor.textContent = "Цвет:" + this._color;
       this._quantity > 0 ? this._cardStorage.textContent = this._storage : null;
       this._quantity > 0 ? this._cardSeller.textContent = this._seller : null;

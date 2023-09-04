@@ -15,18 +15,22 @@ export default class DeliveryList {
     }
 
     _createCard(initialCards) {
-      this.liEl = document.createElement('li')
-      this.liEl.setAttribute('class', 'delivery__card-image')
+      this.liEl = document.createElement('li');
+      this.liEl.setAttribute('class', 'delivery__card-image');
     
-      this.imageEl = document.createElement('img')
-      this.imageEl.setAttribute('class', 'delivery__image')
+      this.imageEl = document.createElement('img');
+      this.imageEl.setAttribute('class', 'delivery__image');
       this.imageEl.src = initialCards.image;
       this.imageEl.alt = initialCards.name;
+
+      this.quantityEl = document.createElement('span');
+      this.quantityEl.textContent = initialCards.buyQuantity;
+      initialCards.buyQuantity < 2 ? this.quantityEl.setAttribute('class', 'delivery__quantity_hidden') : this.quantityEl.setAttribute('class', 'delivery__quantity');
     
-      this.liEl.append(this.imageEl)
+      this.liEl.append(this.quantityEl, this.imageEl);
     
-      this.listEl = this._element.querySelector('.delivery__image-list')
-      this.listEl.append(this.liEl)
+      this.listEl = this._element.querySelector('.delivery__image-list');
+      this.listEl.append(this.liEl);
     }
 
     _createImages() {
