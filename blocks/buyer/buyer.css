@@ -1,3 +1,10 @@
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+}
+
 .buyer {
     display: flex;
     padding: 16px 0px 24px 0px;
@@ -43,6 +50,7 @@
 .buyer__input_name {
     width: 338px;
 }
+
 
 .buyer__input_contacts {
     width: 217.3px;
