@@ -11,10 +11,22 @@
     margin: 16px 32px 0 24px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment {
+        width: 638px;
+    }
+}
+
 .payment__header-box {
     display: flex;
     margin: 0 24px 16px 24px;
     width: 843px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment__header-box {
+        width: 590px;
+    }
 }
 
 .payment__header {
@@ -26,6 +38,12 @@
     line-height: 32px; /* 133.333% */
     letter-spacing: -0.24px;
     width: 755px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment__header {
+        width: 502px;
+    }
 }
 
 .payment__button {
@@ -43,6 +61,12 @@
 
 .payment__box {
     width: 843px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment__box {
+        width: 590px;
+    }
 }
 
 .payment__span {
@@ -67,4 +91,10 @@
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 123.077% */
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment__text {
+        width: 590px;
+    }
 }
