@@ -16,6 +16,8 @@ export default class Card {
       this._checked = data.checked;
       this._deliveryDate = data.deliveryDate;
       this._deliveryDate2 = data.deliveryDate2;
+      this._deliveryQuantity = data.deliveryQuantity;
+      this._deliveryQuantity2 = data.deliveryQuantity2;
       this._cardSelector = cardSelector;
     }
   
@@ -73,6 +75,8 @@ export default class Card {
         checked: this._checked,
         deliveryDate: this._deliveryDate,
         deliveryDate2: this._deliveryDate2,
+        deliveryQuantity: this._deliveryQuantity,
+        deliveryQuantity2: this._deliveryQuantity2,
       };
       initialCards;
 
@@ -127,12 +131,80 @@ export default class Card {
       this._buyQuantity = this._buyQuantity + 1;
       this._cardQuantity.textContent = this._buyQuantity;
       this._toggleButtonsCondition();
+      this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 + 1 : this._deliveryQuantity2;
+      this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity + 1 : this._deliveryQuantity;
+
+      console.log(this._deliveryQuantity, this._deliveryQuantity2)
+
+      const index = initialCards.findIndex((el) => el.id === this._id);
+
+      initialCards[index] = {
+        id: this._id,
+        name: this._title,
+        color: this._color,
+        size: this._size,
+        storage: this._storage,
+        seller:  this._seller,
+        image: this._link,
+        price: this._price,
+        fullPrice: this._fullPrice,
+        quantity: this._quantity,
+        buyQuantity: this._buyQuantity,
+        checked: this._checked,
+        deliveryDate: this._deliveryDate,
+        deliveryDate2: this._deliveryDate2,
+        deliveryQuantity: this._deliveryQuantity,
+        deliveryQuantity2: this._deliveryQuantity2,
+      };
+      initialCards;
+
+      const arr = document.querySelectorAll('.delivery__card')
+      arr.forEach(element => {
+        element.remove();
+        element = null;
+      });
+
+      deliveryCards.renderItems();
     }
 
     _decrementQuantity() {
       this._buyQuantity = this._buyQuantity - 1;
       this._cardQuantity.textContent = this._buyQuantity;
-      this._toggleButtonsCondition();
+      this._toggleButtonsCondition()
+      this._deliveryQuantity2 === 0 || '' ? this._deliveryQuantity = this._deliveryQuantity - 1 : this._deliveryQuantity;
+      this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 - 1 : this._deliveryQuantity2;
+
+      console.log(this._deliveryQuantity, this._deliveryQuantity2)
+
+      const index = initialCards.findIndex((el) => el.id === this._id);
+
+      initialCards[index] = {
+        id: this._id,
+        name: this._title,
+        color: this._color,
+        size: this._size,
+        storage: this._storage,
+        seller:  this._seller,
+        image: this._link,
+        price: this._price,
+        fullPrice: this._fullPrice,
+        quantity: this._quantity,
+        buyQuantity: this._buyQuantity,
+        checked: this._checked,
+        deliveryDate: this._deliveryDate,
+        deliveryDate2: this._deliveryDate2,
+        deliveryQuantity: this._deliveryQuantity,
+        deliveryQuantity2: this._deliveryQuantity2,
+      };
+      initialCards;
+
+      const arr = document.querySelectorAll('.delivery__card')
+      arr.forEach(element => {
+        element.remove();
+        element = null;
+      });
+
+      deliveryCards.renderItems();
     }
   
     generateCard() {

@@ -68,7 +68,7 @@ let initialCards = [
         checked: true,
         deliveryDate: '5—6 февраля',
         deliveryDate2: '',
-        deliveryQuantity: '',
+        deliveryQuantity: 1,
         deliveryQuantity2: '',
     },
     {
@@ -104,7 +104,7 @@ let initialCards = [
         checked: true,
         deliveryDate: '5—6 февраля',
         deliveryDate2: '',
-        deliveryQuantity: '',
+        deliveryQuantity: '1',
         deliveryQuantity2: '',
     },
 ]

@@ -25,9 +25,7 @@ export default class DeliveryList {
 
       this.quantityEl = document.createElement('span');
 
-      this._title == initialCards.deliveryDate ? 
-      (this.quantityEl.textContent = initialCards.buyQuantity - initialCards.deliveryQuantity2) : 
-      (this.quantityEl.textContent = initialCards.buyQuantity - initialCards.deliveryQuantity);
+      this._title == initialCards.deliveryDate ? this.quantityEl.textContent = initialCards.deliveryQuantity : this.quantityEl.textContent = initialCards.deliveryQuantity2;
       
       initialCards.buyQuantity < 2 ? this.quantityEl.setAttribute('class', 'delivery__quantity_hidden') : this.quantityEl.setAttribute('class', 'delivery__quantity');
     
@@ -39,8 +37,8 @@ export default class DeliveryList {
 
     _createImages() {
       for (const initialCard of initialCards) {
-        this._title == initialCard.deliveryDate & initialCard.checked == true ? this._createCard(initialCard) : null;
-        this._title == initialCard.deliveryDate2 & initialCard.checked == true ? this._createCard(initialCard) : null;
+        this._title == initialCard.deliveryDate & initialCard.checked == true & initialCard.deliveryQuantity != 0 ? this._createCard(initialCard) : null;
+        this._title == initialCard.deliveryDate2 & initialCard.checked == true & initialCard.deliveryQuantity2 != 0  ? this._createCard(initialCard) : null;
       }
     }
   

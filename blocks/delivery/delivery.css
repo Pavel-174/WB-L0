@@ -214,6 +214,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 16px; /* 180% */
+    min-width: 12px;
 }
 
 .delivery__quantity_hidden {
