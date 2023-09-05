@@ -29,7 +29,7 @@
         </a>
     </header>
 <main class="main">
-
+    <div class="column1">
     <section class="basket">
         <div class="basket__basket">
             <h2 class="basket__header">Корзина</h2>
@@ -120,36 +120,64 @@
 
     <section class="buyer">
         <h3 class="buyer__header">Получатель</h3>
-        <div class="buyer__box">
-            <div class="buyer__input-box">
-                <label class="buyer__label">Имя</label>
-                <input class="buyer__input buyer__input_name" type="text">
-                <span></span>
+        <form class="buyer__form" novalidate>
+            <div class="buyer__box">
+                <div class="buyer__input-box">
+                    <label class="buyer__label">Имя</label>
+                    <input class="buyer__input buyer__input_name" id="buyer_name" type="text" required>
+                    <span class="buyer__mistake buyer__mistake_name" id="buyer_name-error"></span>
+                </div>
+                <div class="buyer__input-box ">
+                    <label class="buyer__label">Фамилия</label>
+                    <input class="buyer__input buyer__input_name" id="buyer_surname" type="text" required>
+                    <span class="buyer__mistake buyer__mistake_name" id="buyer_surname-error"></span>
+                </div>
             </div>
-            <div class="buyer__input-box ">
-                <label class="buyer__label">Фамилия</label>
-                <input class="buyer__input buyer__input_name" type="text">
-                <span></span>
+            <div class="buyer__box">
+                <div class="buyer__input-box">
+                    <label class="buyer__label">Электронная почта</label>
+                    <input class="buyer__input buyer__input_contacts" type="email" id="buyer_email" required>
+                    <span class="buyer__mistake buyer__mistake_contacts" id="buyer_email-error"></span>
+                </div>
+                <div class="buyer__input-box">
+                    <label class="buyer__label">Телефон</label>
+                    <input class="buyer__input buyer__input_contacts" type="tel" id="buyer_phone" required>
+                    <span class="buyer__mistake buyer__mistake_contacts" id="buyer_phone-error"></span>
+                </div>
+                <div class="buyer__input-box">
+                    <label class="buyer__label">ИНН</label>
+                    <input class="buyer__input buyer__input_contacts" id="buyer_inn" type="number" minlength="14" maxlength="14" required>
+                    <span class="buyer__mistake buyer__mistake_contacts" id="buyer_inn-error">Для таможенного оформления</span>
+                </div>
             </div>
-        </div>
-        <div class="buyer__box">
-            <div class="buyer__input-box">
-                <label class="buyer__label">Электронная почта</label>
-                <input class="buyer__input buyer__input_contacts" type="text">
-                <span></span>
-            </div>
-            <div class="buyer__input-box">
-                <label class="buyer__label">Телефон</label>
-                <input class="buyer__input buyer__input_contacts" type="text">
-                <span></span>
-            </div>
-            <div class="buyer__input-box">
-                <label class="buyer__label">ИНН</label>
-                <input class="buyer__input buyer__input_contacts" type="text">
-                <span></span>
-            </div>
-        </div>
+        </form>
     </section>
+    </div>
+    <div class="column2">
+    <section class="result">
+        <div class="result__box">
+            <h3 class="result__header">Итого</h3>
+            <span class="result__header-span">2 101 063 сом</span>
+        </div>
+        <div class="result__box">
+            <span>203 товара</span>
+            <span>2 302 048 сом</span>
+        </div>
+        <div class="result__box">
+            <span>Скидка</span>
+            <span>−200 985 сом</span>
+        </div>
+        <div class="result__box">
+            <span>Доставка</span>
+            <span>Бесплатно</span>
+        </div>
+        <div class="result__box">
+            <h4>Доставка в пункт выдачи</h4>
+        </div>
+        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+        <span>5–8 фев</span>
+    </section>
+    </div>
 </main>
     <footer class="footer">
         <p class="footer__copyright">© 2022  ООО «Товары и точка»</p>

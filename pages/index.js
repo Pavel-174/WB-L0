@@ -2,13 +2,23 @@
 import Card from "../components/Card.js";
 import Section from "../components/Section.js";
 import DeliveryList from "../components/DeliveryList.js";
+import { FormValidator} from "../components/FormValidator.js";
 
 const activeCardList = '.basket__cards';
 const inactiveCardList = '.basket__cards-missed';
 const deliveryList = '.delivery__cards';
+const formBuyerElement = document.querySelector ('.buyer__form');
 
 let result = initialCards.filter(card => card.quantity > 0);
 let quantity = initialCards.filter(card => card.quantity == 0);
+
+const settings = {
+  inputSelector: '.buyer__input',
+  submitButtonSelector: '',
+  // inactiveButtonClass: '',
+  // activeButtonClass: '',
+  errorInput: 'buyer__input_error'
+};
 
 //сортировка массива по уникальному значению дат доставки
 
@@ -127,3 +137,8 @@ mainCheckbox.onclick = function() {
 
   deliveryCards.renderItems();
 }
+
+// включение валидации
+const validateBuyer = new FormValidator(settings, formBuyerElement);
+// document.querySelector('').onclick(validateBuyer.enableValidation());
+validateBuyer.enableValidation();

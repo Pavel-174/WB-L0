@@ -134,8 +134,6 @@ export default class Card {
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 + 1 : this._deliveryQuantity2;
       this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity + 1 : this._deliveryQuantity;
 
-      console.log(this._deliveryQuantity, this._deliveryQuantity2)
-
       const index = initialCards.findIndex((el) => el.id === this._id);
 
       initialCards[index] = {
@@ -173,8 +171,6 @@ export default class Card {
       this._toggleButtonsCondition()
       this._deliveryQuantity2 === 0 || '' ? this._deliveryQuantity = this._deliveryQuantity - 1 : this._deliveryQuantity;
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 - 1 : this._deliveryQuantity2;
-
-      console.log(this._deliveryQuantity, this._deliveryQuantity2)
 
       const index = initialCards.findIndex((el) => el.id === this._id);
 
