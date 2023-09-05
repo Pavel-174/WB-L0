@@ -24,7 +24,11 @@ export default class DeliveryList {
       this.imageEl.alt = initialCards.name;
 
       this.quantityEl = document.createElement('span');
-      this.quantityEl.textContent = initialCards.buyQuantity;
+
+      this._title == initialCards.deliveryDate ? 
+      (this.quantityEl.textContent = initialCards.buyQuantity - initialCards.deliveryQuantity2) : 
+      (this.quantityEl.textContent = initialCards.buyQuantity - initialCards.deliveryQuantity);
+      
       initialCards.buyQuantity < 2 ? this.quantityEl.setAttribute('class', 'delivery__quantity_hidden') : this.quantityEl.setAttribute('class', 'delivery__quantity');
     
       this.liEl.append(this.quantityEl, this.imageEl);

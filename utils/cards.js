@@ -14,6 +14,8 @@ let initialCards = [
         checked: false,
         deliveryDate: '',
         deliveryDate2: '',
+        deliveryQuantity: '',
+        deliveryQuantity2: '',
     },
     {
         id: 5,
@@ -30,6 +32,8 @@ let initialCards = [
         checked: false,
         deliveryDate: '',
         deliveryDate2: '',
+        deliveryQuantity: '',
+        deliveryQuantity2: '',
     },
     {
         id: 4,
@@ -46,6 +50,8 @@ let initialCards = [
         checked: false,
         deliveryDate: '',
         deliveryDate2: '',
+        deliveryQuantity: '',
+        deliveryQuantity2: '',
     },
     {
         id: 3,
@@ -62,6 +68,8 @@ let initialCards = [
         checked: true,
         deliveryDate: '5—6 февраля',
         deliveryDate2: '',
+        deliveryQuantity: '',
+        deliveryQuantity2: '',
     },
     {
         id: 2,
@@ -78,6 +86,8 @@ let initialCards = [
         checked: true,
         deliveryDate: '5—6 февраля',
         deliveryDate2: '6—7 февраля',
+        deliveryQuantity: 184,
+        deliveryQuantity2: 16,
     },
     {
         id: 1,
@@ -94,5 +104,7 @@ let initialCards = [
         checked: true,
         deliveryDate: '5—6 февраля',
         deliveryDate2: '',
+        deliveryQuantity: '',
+        deliveryQuantity2: '',
     },
 ]
