@@ -104,7 +104,8 @@ export default class Card {
   
     // кнопка Удаления карточек
     _deleteCard() {
-      initialCards = initialCards.filter( item  =>  item.id != this._id);
+      const index = initialCards.map(x => {return x.Id;}).indexOf(this._id);
+      initialCards.splice(index, 1);
       let result = initialCards.filter(card => card.quantity > 0);
       let quantity = initialCards.filter(card => card.quantity == 0);
 
