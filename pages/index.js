@@ -148,4 +148,25 @@ inn.oninput = function(){ this.value = this.value.replace(/[^\d{14}]+/g, ''); };
 const validateBuyer = new FormValidator(settings, formBuyerElement);
 validateBuyer.enableValidation();
 
+//данные для первичной вставки в секцию result
+
+export function renderResultData () {
+  const checkedCards = initialCards.filter(card => card.checked == true);
+
+  const checkedCardsPrices = checkedCards.map(card => card.totalPrice);
+  const totalPrice = checkedCardsPrices.reduce((partialSum, a) => partialSum + a, 0);
+
+  const checkedCardsFullPrices = checkedCards.map(card => card.totalFullPrice);
+  const totalFullPrice = checkedCardsFullPrices.reduce((partialSum, a) => partialSum + a, 0);
+
+  const checkedCardsQuantity = checkedCards.map(card => card.buyQuantity);
+  const totalQuantity = checkedCardsQuantity.reduce((partialSum, a) => partialSum + a, 0);
+
+  document.querySelector('.result__header-span').textContent = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
+  document.querySelector('.result__full-price').textContent =  totalFullPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
+  document.querySelector('.result__quantity').textContent = totalQuantity +  " товара";
+  document.querySelector('.result__discount').textContent =  (totalPrice - totalFullPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
+}
+
+renderResultData ();
 
