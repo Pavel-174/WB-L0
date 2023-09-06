@@ -7,7 +7,6 @@
         <meta name="description" content="Маркетплэйс «Товары и точка»">
         <meta name="keywords" content="товары, маркетплэйс, корзина, покупки">
         <meta name="author" content="Павел Алексеев">
-        <!-- <link rel="stylesheet" href="./pages/index.css"> -->
     </head>
 <body class="page">
     <header class="header">
@@ -85,9 +84,11 @@
                         <stop offset="1" stop-color="#0CB477"/>
                       </linearGradient>
                     </defs>
-                  </svg>
-                  <text class="delivery__text delivery__text_2">Обратная доставка товаров на склад при отказе —</text>
-                  <span class="delivery__text delivery__free">бесплатно</span>
+                </svg>
+                <div>
+                    <text class="delivery__text delivery__text_2">Обратная доставка товаров на склад при отказе —</text>
+                    <span class="delivery__text delivery__free">бесплатно</span>
+                </div>
             </div>
         </div>        
     </section>
@@ -199,10 +200,26 @@
               </div>
         </div>
         <div class="result__box">
-            <h4>Доставка в пункт выдачи</h4>
+            <h4>Оплата картой</h4>
             <button></button>
         </div>
-        <button class="result__button" type="submit"></button>
+        <div class="result__delivery-box">
+              <div class="result__delivery">
+                <label class="basket__label">
+                    <input class="basket__checkbox" type="checkbox" checked="true" value="1" id="selectAll">
+                    <span></span>
+                </label>
+                <text>Списать оплату сразу</text>
+              </div>
+              <text>Спишем оплату с карты при получении</text>
+        </div>
+        <button class="result__button" type="submit">Заказать</button>
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7657 4.68031L4.59586 13.4814L0.257324 8.66919L1.74276 7.32998L4.6174 10.5185L11.2999 3.31964L12.7657 4.68031Z" fill="black"/>
+            </svg>
+            <text>Соглашаюсь с правилами пользования торговой площадкой и возврата</text>
+        </div>
     </section>
     </div>
 </main>
@@ -294,7 +311,5 @@
         </li>
     </template>
 
-    <!-- <script src="./utils/cards.js"></script>
-    <script type="module" src="./pages/index.js"></script> -->
 </body>
 </html>
