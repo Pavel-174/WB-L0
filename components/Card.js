@@ -133,6 +133,10 @@ export default class Card {
       this._toggleButtonsCondition();
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 + 1 : this._deliveryQuantity2;
       this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity + 1 : this._deliveryQuantity;
+      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
 
       const index = initialCards.findIndex((el) => el.id === this._id);
 
@@ -171,6 +175,10 @@ export default class Card {
       this._toggleButtonsCondition()
       this._deliveryQuantity2 === 0 || '' ? this._deliveryQuantity = this._deliveryQuantity - 1 : this._deliveryQuantity;
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 - 1 : this._deliveryQuantity2;
+      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
 
       const index = initialCards.findIndex((el) => el.id === this._id);
 
@@ -234,10 +242,10 @@ export default class Card {
       this._quantity > 0 ? this._cardStorage.textContent = this._storage : null;
       this._quantity > 0 ? this._cardSeller.textContent = this._seller : null;
       this._quantity > 0 ? this._cardQuantity.textContent = this._buyQuantity : null;
-      this._quantity > 0 ? this._cardPrice.textContent = this._price : null;
-      this._quantity > 0 ? this._cardFullPrice.textContent = this._fullPrice : null;
-      this._quantity > 0 ? this._cardPriceBig.textContent = this._price : null;
-      this._quantity > 0 ? this._cardFullPriceBig.textContent = this._fullPrice : null;
+      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
       this._quantity > 0 ? ( this._quantity < 5 ? this._cardMistake.textContent = "Осталось " + this._quantity + " шт." : this._cardMistake === null ) : null; 
 
       this._quantity > 0 ? this. _toggleButtonsCondition() : null;

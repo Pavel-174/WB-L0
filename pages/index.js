@@ -142,3 +142,10 @@ mainCheckbox.onclick = function() {
 const validateBuyer = new FormValidator(settings, formBuyerElement);
 // document.querySelector('').onclick(validateBuyer.enableValidation());
 validateBuyer.enableValidation();
+
+//запрет ввода букв в input
+const phone = document.querySelector('#buyer_phone');
+const inn = document.querySelector('#buyer_inn');
+
+phone.oninput = function(){ this.value = this.value.replace(/[^\d\+\(\)]/g,''); };
+inn.oninput = function(){ this.value = this.value.replace(/[^\d]+/g,''); };

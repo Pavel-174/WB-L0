@@ -10,7 +10,29 @@ class FormValidator {
       this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
       this._buttonElement = this._formElement.querySelector(this._submitButtonSelector);
     }
-  
+
+    _validMail() {
+      const _errorElement = this._formElement.querySelector(`#buyer_email-error`);
+      const re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+      const myMail = this._formElement.querySelector('#buyer_email').value;
+      const valid = re.test(myMail);
+      if (valid) _errorElement.textContent = '';
+      else if (myMail == '') _errorElement.textContent = 'Укажите электронную почту';
+      else _errorElement.textContent = 'Проверьте адрес электронной почты';
+      return valid;
+    }
+
+    _validPhone() {
+      const _errorElement = this._formElement.querySelector(`#buyer_phone-error`);
+      const re = /^[\d]{1}\ \[\d]{2,3}\\ [\d]{2,3} [\d]{2,3} [\d]{2,3}$/;
+      const myPhone = this._formElement.querySelector('#buyer_phone').value;
+      const valid = re.test(myPhone);
+      if (valid) _errorElement.textContent = '';
+      else if (myPhone == '') _errorElement.textContent = 'Укажите номер телефона' ;
+      else _errorElement.textContent = 'Формат: +9 999 999 99 99';
+      return valid;
+    }  
+
     _showInputError = (inputElement) => {
       const _errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
     
@@ -20,9 +42,9 @@ class FormValidator {
 
       this._formElement.querySelector(`#buyer_surname-error`) == _errorElement ? _errorElement.textContent = 'Введите фамилию' : null;
 
-      this._formElement.querySelector('#buyer_email-error') == _errorElement ? _errorElement.textContent = 'Укажите электронную почту' : null;
+      this._validPhone();
 
-      this._formElement.querySelector('#buyer_phone-error') == _errorElement ? _errorElement.textContent = 'Укажите номер телефона' : null;
+      this._validMail();
     };
   
     _hideInputError = (inputElement) => {
