@@ -6,7 +6,7 @@ let initialCards = [
         size: "",
         storage: "Коледино WB",
         seller: "OOO Вайлдберриз",
-        image: "./images/Frame277132128.jpg",
+        image: "../images/Frame277132128.jpg",
         price: 494,
         fullPrice: 950,
         quantity: 0,
@@ -120,3 +120,6 @@ let initialCards = [
         totalFullPrice: '',
     },
 ]
+
+
+export {initialCards}

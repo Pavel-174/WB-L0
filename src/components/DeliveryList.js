@@ -1,3 +1,5 @@
+import { initialCards } from "../utils/cards.js";
+
 export default class DeliveryList {
     constructor(date, cardSelector) {
       this._title = date;

@@ -1,8 +1,9 @@
-// import './index.css';
+import './index.css';
 import Card from "../components/Card.js";
 import Section from "../components/Section.js";
 import DeliveryList from "../components/DeliveryList.js";
-import { FormValidator} from "../components/FormValidator.js";
+import { FormValidator } from "../components/FormValidator.js";
+import { initialCards } from "../utils/cards.js";
 
 const activeCardList = '.basket__cards';
 const inactiveCardList = '.basket__cards-missed';

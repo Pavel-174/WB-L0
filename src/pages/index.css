@@ -76,6 +76,7 @@
 @import url(../blocks/delivery/__span/delivery__span.css);
 @import url(../blocks/delivery/__image-list/delivery__image-list.css);
 @import url(../blocks/delivery/__image/delivery__image.css);
+@import url(../blocks/delivery/__card-image/delivery__card-image.css);
 @import url(../blocks/delivery/__free/delivery__free.css);
 @import url(../blocks/delivery/__quantity/delivery__quantity.css);
 @import url(../blocks/delivery/__quantity/_hidden/delivery__quantity_hidden.css);

@@ -1,5 +1,6 @@
 import { deliveryCards } from "../pages/index.js";
 import { renderResultData } from "../pages/index.js";
+import { initialCards } from "../utils/cards.js";
 
 export default class Card {
     constructor(data, cardSelector) {
