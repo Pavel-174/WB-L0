@@ -67,6 +67,14 @@
 @import url(../blocks/payment/payment.css);
 
 @import url(../blocks/buyer/buyer.css);
+@import url(../blocks/buyer/__header/buyer__header.css);
+@import url(../blocks/buyer/__box/buyer__box.css);
+@import url(../blocks/buyer/__input-box/buyer__input-box.css);
+@import url(../blocks/buyer/__input/buyer__input.css);
+@import url(../blocks/buyer/__input/_name/buyer__input_name.css);
+@import url(../blocks/buyer/__input/_contacts/buyer__input_contacts.css);
+@import url(../blocks/buyer/__input/_error/buyer__input_error.css);
+@import url(../blocks/buyer/__mistake/_error/buyer__mistake_error.css);
 
 @import url(../blocks/result/result.css);
 
