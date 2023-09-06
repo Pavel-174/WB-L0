@@ -2,9 +2,9 @@ class FormValidator {
     constructor(settings, formElement) {
   
       this._inputSelector = settings.inputSelector;
-      // this._submitButtonSelector = settings.submitButtonSelector;
+      this._submitButtonSelector = settings.submitButtonSelector;
       this._errorInput = settings.errorInput;
-  
+      this._errorSpan = settings.errorSpan
       this._formElement = formElement;
   
       this._inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));
@@ -24,32 +24,36 @@ class FormValidator {
 
     _validPhone() {
       const _errorElement = this._formElement.querySelector(`#buyer_phone-error`);
-      const re = /^[\d]{1}\ \[\d]{2,3}\\ [\d]{2,3} [\d]{2,3} [\d]{2,3}$/;
+      const re = /^[\d]{1}\ \[\d]{2,3}\\ [\d]{2,3} [\d]{2,3}[\d]{2,3}$/;
       const myPhone = this._formElement.querySelector('#buyer_phone').value;
       const valid = re.test(myPhone);
       if (valid) _errorElement.textContent = '';
       else if (myPhone == '') _errorElement.textContent = 'Укажите номер телефона' ;
       else _errorElement.textContent = 'Формат: +9 999 999 99 99';
       return valid;
-    }  
+    }
 
     _showInputError = (inputElement) => {
       const _errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
-    
+
+      _errorElement.classList.add(this._errorSpan);    
       inputElement.classList.add(this._errorInput);
 
       this._formElement.querySelector(`#buyer_name-error`) == _errorElement ? _errorElement.textContent = 'Укажите имя' : null;
 
       this._formElement.querySelector(`#buyer_surname-error`) == _errorElement ? _errorElement.textContent = 'Введите фамилию' : null;
 
-      this._validPhone();
+      this._formElement.querySelector(`#buyer_inn-error`) == _errorElement ? _errorElement.textContent = 'Укажите ИНН' : null;
 
       this._validMail();
+
+      this._validPhone();
     };
   
     _hideInputError = (inputElement) => {
       const _errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
   
+      _errorElement.classList.remove(this._errorSpan);
       inputElement.classList.remove(this._errorInput);
       _errorElement.textContent = '';
     };
@@ -71,7 +75,7 @@ class FormValidator {
   
     _checkInputValidity = (inputElement) => {
       if (!inputElement.validity.valid) {
-        this._showInputError(inputElement, inputElement.validationMessage);
+        this._showInputError(inputElement);
       } else {
         this._hideInputError(inputElement);
       }
@@ -84,8 +88,9 @@ class FormValidator {
     enableValidation() {
       this._formElement.addEventListener('submit', function (evt) {
         evt.preventDefault();
+        this._checkInputValidity(inputElement);
       });
-  
+      
       this._setEventListeners();
     };
     

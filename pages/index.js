@@ -14,10 +14,9 @@ let quantity = initialCards.filter(card => card.quantity == 0);
 
 const settings = {
   inputSelector: '.buyer__input',
-  submitButtonSelector: '',
-  // inactiveButtonClass: '',
-  // activeButtonClass: '',
-  errorInput: 'buyer__input_error'
+  submitButtonSelector: '.result__button',
+  errorInput: 'buyer__input_error',
+  errorSpan: 'buyer__mistake_error'
 };
 
 //сортировка массива по уникальному значению дат доставки
@@ -138,14 +137,15 @@ mainCheckbox.onclick = function() {
   deliveryCards.renderItems();
 }
 
-// включение валидации
-const validateBuyer = new FormValidator(settings, formBuyerElement);
-// document.querySelector('').onclick(validateBuyer.enableValidation());
-validateBuyer.enableValidation();
-
 //запрет ввода букв в input
 const phone = document.querySelector('#buyer_phone');
 const inn = document.querySelector('#buyer_inn');
 
 phone.oninput = function(){ this.value = this.value.replace(/[^\d\+\(\)]/g,''); };
-inn.oninput = function(){ this.value = this.value.replace(/[^\d]+/g,''); };
+inn.oninput = function(){ this.value = this.value.replace(/[^\d{14}]+/g, ''); };
+
+// включение валидации
+const validateBuyer = new FormValidator(settings, formBuyerElement);
+validateBuyer.enableValidation();
+
+
