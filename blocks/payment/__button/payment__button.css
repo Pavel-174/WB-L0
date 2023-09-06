@@ -1,4 +1,4 @@
-.delivery__button {
+.payment__button {
     border: none;
     background: none;
     color: rgba(203, 17, 171, 1);
@@ -12,7 +12,7 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 1023.9px) {
-    .delivery__button {
+    .payment__button {
         padding: 0;
     }
 }

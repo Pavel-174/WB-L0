@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Segoe UI';
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;: 'Segoe UI';
     src: url('SegoeUI.eot');
     src: local('Segoe UI'), local('SegoeUI'),
         url('SegoeUI.eot?#iefix') format('embedded-opentype'),

@@ -1,12 +1,9 @@
-.delivery__header-6 {
-    margin: 0;
+.payment__span {
     color:  rgba(0, 0, 0, 1);
     font-family: Segoe UI, Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 24px; /* 150% */
-    height: 44px;
-    margin: 0 78px 16px 0;
-    min-width: 153px;
+    margin-left: 9px;
 }

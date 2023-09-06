@@ -81,6 +81,13 @@
 @import url(../blocks/delivery/__quantity/_hidden/delivery__quantity_hidden.css);
 
 @import url(../blocks/payment/payment.css);
+@import url(../blocks/payment/__header-box/payment__header-box.css);
+@import url(../blocks/payment/__header/payment__header.css);
+@import url(../blocks/payment/__button/payment__button.css);
+@import url(../blocks/payment/__box/payment__box.css);
+@import url(../blocks/payment/__span/payment__span.css);
+@import url(../blocks/payment/__span/_2/payment__span_2.css);
+@import url(../blocks/payment/__text/payment__text.css);
 
 @import url(../blocks/buyer/buyer.css);
 @import url(../blocks/buyer/__header/buyer__header.css);

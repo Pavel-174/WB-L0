@@ -23,7 +23,7 @@
 
 .result__header {
     color: rgba(0, 0, 0, 1);
-    font-family: Segoe UI;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -34,7 +34,7 @@
 
 .result__header-span {
     color: rgba(0, 0, 0, 1);
-    font-family: Segoe UI;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;

@@ -1,6 +1,6 @@
 .delivery__text {
-    color: var(--text-black, #000);
-    font-family: Segoe UI;
+    color:  rgba(0, 0, 0, 1);
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;

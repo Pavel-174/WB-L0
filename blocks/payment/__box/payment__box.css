@@ -1,0 +1,15 @@
+.payment__box {
+    width: 843px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .payment__box {
+        width: 590px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .payment__box {
+        width: 288px;
+    }
+}
