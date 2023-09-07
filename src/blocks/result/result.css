@@ -168,3 +168,13 @@
 .result__text-box {
     display: inline;
 }
+
+.result__text-box {
+    display: inline;
+}
+
+.result__svg {
+    width: 22px;
+    height: 22px;
+
+}
