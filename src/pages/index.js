@@ -164,9 +164,9 @@ export function renderResultData () {
   const totalQuantity = checkedCardsQuantity.reduce((partialSum, a) => partialSum + a, 0);
 
   document.querySelector('.result__header-span').textContent = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
-  document.querySelector('.result__full-price').textContent =  totalFullPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
-  document.querySelector('.result__quantity').textContent = totalQuantity +  " товара";
-  document.querySelector('.result__discount').textContent =  (totalPrice - totalFullPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
+  document.querySelector('.result__span_full-price').textContent =  totalFullPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
+  document.querySelector('.result__span_quantity').textContent = totalQuantity +  " товара";
+  document.querySelector('.result__span_discount').textContent =  (totalPrice - totalFullPrice).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом';
 }
 
 renderResultData ();

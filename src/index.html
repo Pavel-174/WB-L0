@@ -161,23 +161,23 @@
             <span class="result__header-span"></span>
         </div>
         <div class="result__box">
-            <span class="result__quantity"></span>
-            <span class="result__full-price"></span>
+            <span class="result__span result__span_quantity"></span>
+            <span class="result__span result__span_full-price"></span>
         </div>
         <div class="result__box">
-            <span>Скидка</span>
-            <span class="result__discount"></span>
+            <span class="result__span">Скидка</span>
+            <span class="result__span result__span_discount"></span>
         </div>
         <div class="result__box">
-            <span>Доставка</span>
-            <span>Бесплатно</span>
+            <span class="result__span">Доставка</span>
+            <span class="result__span">Бесплатно</span>
         </div>
         <div class="result__box">
-            <h4>Доставка в пункт выдачи</h4>
-            <button></button>
+            <h4 class="result__header-4">Доставка в пункт выдачи</h4>
+            <button class="result__button-pencil"></button>
         </div>
-        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
-        <span>5–8 фев</span>
+        <span class="result__span">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+        <span class="result__span result__span_date">5–8 фев</span>
         
         <div class="result__delivery-box">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
@@ -200,8 +200,25 @@
               </div>
         </div>
         <div class="result__box">
-            <h4>Оплата картой</h4>
-            <button></button>
+            <h4 class="result__header-4">Оплата картой</h4>
+            <button class="result__button-pencil"></button>
+        </div>
+        <div class="result__payment payment__box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 30 10" fill="none">
+                <path d="M16.6812 1.84383L14.8644 5.75836H14.6805V1.00037H12.0851V9.00245H14.2372C14.8211 9.00245 15.3402 8.66723 15.5889 8.14817L17.4166 4.24445H17.6004V9.00245H20.1958V1.00037H18.0113C17.449 1.00037 16.9191 1.33559 16.6812 1.84383Z" fill="#319B42"/>
+                <path d="M6.97242 2.04929L5.90181 5.75836H5.71797L4.63654 2.04929C4.4527 1.4221 3.87954 1.00037 3.23069 1.00037H0.667709V9.00245H3.26313V4.24445H3.44697L4.93934 9.00245H6.66962L8.16199 4.24445H8.34583V9.00245H10.9412V1.00037H8.37827C7.72942 1.00037 7.14545 1.4221 6.97242 2.04929Z" fill="#319B42"/>
+                <path d="M21.3243 4.56745V9.00245H23.9206V6.40635H26.7116C27.9231 6.40635 28.9508 5.63834 29.3294 4.56745H21.3243Z" fill="#319B42"/>
+                <path d="M26.6357 1.00037H20.859C21.216 2.90417 22.8819 4.24549 24.8832 4.24549H29.3726C29.405 4.07241 29.4267 3.87771 29.4267 3.683C29.4267 2.13616 28.1826 1.00037 26.6357 1.00037Z" fill="url(#paint0_linear_2_3460)"/>
+                <defs>
+                  <linearGradient id="paint0_linear_2_3460" x1="20.859" y1="2.62293" x2="29.4267" y2="2.62293" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#00A3E1"/>
+                    <stop offset="0.3042" stop-color="#009ADD"/>
+                    <stop offset="0.7987" stop-color="#0082D4"/>
+                    <stop offset="1" stop-color="#0076CF"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <span class="payment__span">1234 56•• •••• 1234</span>
         </div>
         <div class="result__delivery-box">
               <div class="result__delivery">
@@ -214,7 +231,7 @@
               <text>Спишем оплату с карты при получении</text>
         </div>
         <button class="result__button" type="submit">Заказать</button>
-        <div>
+        <div class="result__text-box">
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7657 4.68031L4.59586 13.4814L0.257324 8.66919L1.74276 7.32998L4.6174 10.5185L11.2999 3.31964L12.7657 4.68031Z" fill="black"/>
             </svg>
