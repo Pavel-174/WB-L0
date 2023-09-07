@@ -24,6 +24,7 @@
         background-color: transparent;
         box-shadow: none;
         width: 288px;
+        padding: 16px;
     }
 }
 
@@ -114,7 +115,6 @@
 
 .result__delivery-box {
     width: 381px;
-    height: 52px;
     display: flex;
     flex-direction: column;
     padding: 8px 8px 12px 8px;
@@ -149,6 +149,7 @@
 
 .result__payment {
     margin-top: 11px;
+    display: flex;
 }
 
 .result__button {
@@ -176,5 +177,9 @@
 .result__svg {
     width: 22px;
     height: 22px;
+}
 
+.result__mir{
+    width: 32px;
+    height: 24px;
 }

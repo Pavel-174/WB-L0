@@ -92,6 +92,7 @@
 @import url(../blocks/payment/__span/payment__span.css);
 @import url(../blocks/payment/__span/_2/payment__span_2.css);
 @import url(../blocks/payment/__text/payment__text.css);
+@import url(../blocks/payment/__mir/payment__mir.css);
 
 @import url(../blocks/buyer/buyer.css);
 @import url(../blocks/buyer/__header/buyer__header.css);

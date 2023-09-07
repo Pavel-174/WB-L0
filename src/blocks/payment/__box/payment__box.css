@@ -1,4 +1,5 @@
 .payment__box {
+    display: flex;
     width: 843px;
 }
 
