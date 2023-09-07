@@ -1,0 +1,10 @@
+.result__button-pencil {
+    background-image: url(../../../images/pencil.svg);
+    background-position: centr;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

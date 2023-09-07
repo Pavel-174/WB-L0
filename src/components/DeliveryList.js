@@ -5,7 +5,8 @@ export default class DeliveryList {
       this._title = date;
       this._cardSelector = cardSelector;
     }
-  
+    
+    //клонируем template карточки
     _getTemplate() {
       const cardElement = document
         .querySelector(this._cardSelector)
@@ -16,6 +17,7 @@ export default class DeliveryList {
       this._element = cardElement;
     }
 
+    //наполняем строку мини-карточками
     _createCard(initialCards) {
       this.liEl = document.createElement('li');
       this.liEl.setAttribute('class', 'delivery__card-image');
@@ -37,6 +39,7 @@ export default class DeliveryList {
       this.listEl.append(this.liEl);
     }
 
+    //наполняем фотографиями мини-карточки
     _createImages() {
       for (const initialCard of initialCards) {
         this._title == initialCard.deliveryDate & initialCard.checked == true & initialCard.deliveryQuantity != 0 ? this._createCard(initialCard) : null;
@@ -44,6 +47,7 @@ export default class DeliveryList {
       }
     }
   
+    //создаем строки с карточками
     generateCard() {
 
       this._getTemplate();

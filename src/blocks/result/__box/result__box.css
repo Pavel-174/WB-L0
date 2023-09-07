@@ -1,0 +1,24 @@
+.result__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    width: 381px;
+    align-items: flex-end;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399.9px) {
+    .result__box {
+        width: 255px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1023.9px) {
+    .result__box {
+        width: 288px;
+    }
+}
+
+.result__box:nth-child(2) {
+    margin-top: 9px;
+}

@@ -105,6 +105,21 @@
 @import url(../blocks/buyer/__mistake/_error/buyer__mistake_error.css);
 
 @import url(../blocks/result/result.css);
+@import url(../blocks/result/__box/result__box.css);
+@import url(../blocks/result/__header/result__header.css);
+@import url(../blocks/result/__header-span/result__header-span.css);
+@import url(../blocks/result/__span/result__span.css);
+@import url(../blocks/result/__span/_date/result__span_date.css);
+@import url(../blocks/result/__span/_free/result__span_free.css);
+@import url(../blocks/result/__header-4/result__header-4.css);
+@import url(../blocks/result/__button-pencil/result__button-pencil.css);
+@import url(../blocks/result/__delivery-box/result__delivery-box.css);
+@import url(../blocks/result/__delivery/result__delivery.css);
+@import url(../blocks/result/__payment/result__payment.css);
+@import url(../blocks/result/__button/result__button.css);
+@import url(../blocks/result/__text-box/result__text-box.css);
+@import url(../blocks/result/__svg/result__svg.css);
+@import url(../blocks/result/__mir/result__mir.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);

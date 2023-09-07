@@ -24,7 +24,8 @@ export default class Card {
       this._totalFullPrice = data.totalFullPrice;
       this._cardSelector = cardSelector;
     }
-  
+    
+    //клонируем template каротчки
     _getTemplate() {
       const cardElement = document
         .querySelector(this._cardSelector)
@@ -33,6 +34,52 @@ export default class Card {
         .cloneNode(true);
 
       this._element = cardElement;
+    }
+
+    //обновление данных в массиве
+    _rewriteArray() {
+      const index = initialCards.findIndex((el) => el.id === this._id);
+
+      initialCards[index] = {
+        id: this._id,
+        name: this._title,
+        color: this._color,
+        size: this._size,
+        storage: this._storage,
+        seller:  this._seller,
+        image: this._link,
+        price: this._price,
+        fullPrice: this._fullPrice,
+        quantity: this._quantity,
+        buyQuantity: this._buyQuantity,
+        checked: this._checked,
+        deliveryDate: this._deliveryDate,
+        deliveryDate2: this._deliveryDate2,
+        deliveryQuantity: this._deliveryQuantity,
+        deliveryQuantity2: this._deliveryQuantity2,
+        totalPrice: this._totalPrice,
+        totalFullPrice: this._totalFullPrice,
+      };
+      initialCards;
+    }
+
+    //удаление всех карточек
+    _removeCards() {
+      const arr = document.querySelectorAll('.delivery__card')
+      arr.forEach(element => {
+        element.remove();
+        element = null;
+      });
+    }
+
+    // установка цен
+    _changePrices() {
+      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
+      this._totalPrice = this._price * this._buyQuantity;
+      this._totalFullPrice = this._fullPrice *  this._buyQuantity;
     }
 
     //Установка слушателей
@@ -62,35 +109,9 @@ export default class Card {
     _checkboxTumbler() {
       this._checkbox.checked == true ? this._checked = true : this._checked = false;
 
-      const index = initialCards.findIndex((el) => el.id === this._id);
+      this._rewriteArray();
 
-      initialCards[index] = {
-        id: this._id,
-        name: this._title,
-        color: this._color,
-        size: this._size,
-        storage: this._storage,
-        seller:  this._seller,
-        image: this._link,
-        price: this._price,
-        fullPrice: this._fullPrice,
-        quantity: this._quantity,
-        buyQuantity: this._buyQuantity,
-        checked: this._checked,
-        deliveryDate: this._deliveryDate,
-        deliveryDate2: this._deliveryDate2,
-        deliveryQuantity: this._deliveryQuantity,
-        deliveryQuantity2: this._deliveryQuantity2,
-        totalPrice: this._totalPrice,
-        totalFullPrice: this._totalFullPrice,
-      };
-      initialCards;
-
-      const arr = document.querySelectorAll('.delivery__card')
-      arr.forEach(element => {
-        element.remove();
-        element = null;
-      });
+      this._removeCards();
 
       deliveryCards.renderItems();
 
@@ -121,11 +142,7 @@ export default class Card {
       
       result.length == 0 ? document.querySelector('.basket__check-all').classList.add('basket__check-all_hide') : null;
 
-      const arr = document.querySelectorAll('.delivery__card')
-      arr.forEach(element => {
-        element.remove();
-        element = null;
-      });
+      this._removeCards();
 
       deliveryCards.renderItems();
 
@@ -138,102 +155,48 @@ export default class Card {
       this._buyQuantity == 1 ? this._decrementButton.disabled = true : this._decrementButton.disabled = false;
     }
 
+    //добавить колличество заказываемых товаров
     _incrementQuantity() {
       this._buyQuantity = this._buyQuantity + 1;
+      console.log(this._buyQuantity);
       this._cardQuantity.textContent = this._buyQuantity;
       this._toggleButtonsCondition();
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 + 1 : this._deliveryQuantity2;
       this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity + 1 : this._deliveryQuantity;
-      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._totalPrice = this._price * this._buyQuantity;
-      this._totalFullPrice = this._fullPrice *  this._buyQuantity;
+      
+      this._changePrices();
 
-      const index = initialCards.findIndex((el) => el.id === this._id);
+      this._rewriteArray();
 
-      initialCards[index] = {
-        id: this._id,
-        name: this._title,
-        color: this._color,
-        size: this._size,
-        storage: this._storage,
-        seller:  this._seller,
-        image: this._link,
-        price: this._price,
-        fullPrice: this._fullPrice,
-        quantity: this._quantity,
-        buyQuantity: this._buyQuantity,
-        checked: this._checked,
-        deliveryDate: this._deliveryDate,
-        deliveryDate2: this._deliveryDate2,
-        deliveryQuantity: this._deliveryQuantity,
-        deliveryQuantity2: this._deliveryQuantity2,
-        totalPrice: this._totalPrice,
-        totalFullPrice: this._totalFullPrice,
-      };
-      initialCards;
-
-      const arr = document.querySelectorAll('.delivery__card')
-      arr.forEach(element => {
-        element.remove();
-        element = null;
-      });
+      this._removeCards();
 
       deliveryCards.renderItems();
 
       renderResultData();
     }
 
+    //уменьшить колличество заказываемых товаров
     _decrementQuantity() {
       this._buyQuantity = this._buyQuantity - 1;
       this._cardQuantity.textContent = this._buyQuantity;
+
       this._toggleButtonsCondition()
-      this._deliveryQuantity2 === 0 || '' ? this._deliveryQuantity = this._deliveryQuantity - 1 : this._deliveryQuantity;
+
+      this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity - 1 : this._deliveryQuantity;
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 - 1 : this._deliveryQuantity2;
-      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._totalPrice = this._price * this._buyQuantity;
-      this._totalFullPrice = this._fullPrice *  this._buyQuantity;
-      
-      const index = initialCards.findIndex((el) => el.id === this._id);
+    
+      this._changePrices();
 
-      initialCards[index] = {
-        id: this._id,
-        name: this._title,
-        color: this._color,
-        size: this._size,
-        storage: this._storage,
-        seller:  this._seller,
-        image: this._link,
-        price: this._price,
-        fullPrice: this._fullPrice,
-        quantity: this._quantity,
-        buyQuantity: this._buyQuantity,
-        checked: this._checked,
-        deliveryDate: this._deliveryDate,
-        deliveryDate2: this._deliveryDate2,
-        deliveryQuantity: this._deliveryQuantity,
-        deliveryQuantity2: this._deliveryQuantity2,
-        totalPrice: this._totalPrice,
-        totalFullPrice: this._totalFullPrice,
-      };
-      initialCards;
+      this._rewriteArray();
 
-      const arr = document.querySelectorAll('.delivery__card')
-      arr.forEach(element => {
-        element.remove();
-        element = null;
-      });
+      this._removeCards();
 
       deliveryCards.renderItems();
 
       renderResultData();
     }
   
+    //ыункция создания карточки
     generateCard() {
       this._getTemplate();
       
@@ -265,37 +228,11 @@ export default class Card {
       this._quantity > 0 ? this._cardStorage.textContent = this._storage : null;
       this._quantity > 0 ? this._cardSeller.textContent = this._seller : null;
       this._quantity > 0 ? this._cardQuantity.textContent = this._buyQuantity : null;
-      this._quantity > 0 ? this._cardPrice.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPrice.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardPriceBig.textContent = (this._price * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
-      this._quantity > 0 ? this._cardFullPriceBig.textContent = (this._fullPrice * this._buyQuantity).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' сом' : null;
       this._quantity > 0 ? ( this._quantity < 5 ? this._cardMistake.textContent = "Осталось " + this._quantity + " шт." : this._cardMistake === null ) : null;
-      this._totalPrice = this._price * this._buyQuantity;
-      this._totalFullPrice = this._fullPrice * this._buyQuantity;
 
-      const index = initialCards.findIndex((el) => el.id === this._id);
+      this._changePrices();
 
-      initialCards[index] = {
-        id: this._id,
-        name: this._title,
-        color: this._color,
-        size: this._size,
-        storage: this._storage,
-        seller:  this._seller,
-        image: this._link,
-        price: this._price,
-        fullPrice: this._fullPrice,
-        quantity: this._quantity,
-        buyQuantity: this._buyQuantity,
-        checked: this._checked,
-        deliveryDate: this._deliveryDate,
-        deliveryDate2: this._deliveryDate2,
-        deliveryQuantity: this._deliveryQuantity,
-        deliveryQuantity2: this._deliveryQuantity2,
-        totalPrice: this._totalPrice,
-        totalFullPrice: this._totalFullPrice,
-      };
-      initialCards;
+      this._rewriteArray();
 
       renderResultData();
 
