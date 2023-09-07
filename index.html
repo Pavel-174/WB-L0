@@ -7,7 +7,6 @@
         <meta name="description" content="Маркетплэйс «Товары и точка»">
         <meta name="keywords" content="товары, маркетплэйс, корзина, покупки">
         <meta name="author" content="Павел Алексеев">
-        <!-- <link rel="stylesheet" href="./pages/index.css"> -->
     <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
 <body class="page">
     <header class="header">
@@ -55,7 +54,7 @@
             <div class="delivery__box">
                 <h6 class="delivery__header-6">Пункт выдачи</h6>
                 <div class="delivery__adress">
-                    <text class="delivery__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</text>
+                    <span class="delivery__text">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M6.69769 1.14922C6.43817 0.528396 5.56198 0.528387 5.30244 1.14919L6.69769 1.14922ZM5.30244 1.14919L4.14719 3.90977L1.19202 4.16613C0.519264 4.22467 0.262282 5.05966 0.759713 5.49464L3.00514 7.45915L2.33207 10.3824C2.18436 11.0238 2.87792 11.5567 3.46133 11.2023L6.00032 9.65611L8.53797 11.2015C9.12269 11.5588 9.81568 11.0227 9.66861 10.3826L8.99549 7.45915L11.2402 5.49537C11.7385 5.05961 11.4793 4.22519 10.8083 4.16667L7.85294 3.91029L6.69769 1.14922" fill="#FF970D"/>
@@ -67,27 +66,16 @@
             </div>
             <div class="delivery__box">
                 <h6 class="delivery__header-6">Стоимость доставки</h6>
-                <text class="delivery__text">Бесплатно</text>
+                <span class="delivery__text">Бесплатно</span>
             </div>
             <ul class="delivery__cards">
             </ul>
             <div class="delivery__box_2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.9998C1 16.5226 5.47715 20.9998 11 20.9998C16.5228 20.9998 21 16.5226 21 10.9998C21 5.47691 16.5228 0.999756 11 0.999756C5.47715 0.999756 1 5.47691 1 10.9998ZM19.1818 10.9997C19.1818 15.5184 15.5187 19.1816 11 19.1816C6.48128 19.1816 2.81815 15.5184 2.81815 10.9997C2.81815 6.48103 6.48128 2.81791 11 2.81791C15.5187 2.81791 19.1818 6.48103 19.1818 10.9997Z" fill="url(#paint0_linear_2_3453)"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.98273 9.6548C7.40206 9.29538 8.03336 9.34394 8.39278 9.76327L10.6286 12.3717L14.6826 7.58061C15.0394 7.15901 15.6704 7.10643 16.092 7.46317C16.5136 7.81991 16.5662 8.45089 16.2094 8.8725L11.7761 14.1118C11.1795 14.817 10.0933 14.8204 9.49219 14.1191L6.87427 11.0648C6.51485 10.6455 6.56341 10.0142 6.98273 9.6548Z" fill="url(#paint1_linear_2_3453)"/>
-                    <defs>
-                      <linearGradient id="paint0_linear_2_3453" x1="4" y1="1.99994" x2="11" y2="20.9998" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0CD38B"/>
-                        <stop offset="1" stop-color="#0CB477"/>
-                      </linearGradient>
-                      <linearGradient id="paint1_linear_2_3453" x1="9" y1="7.5" x2="10.5089" y2="15.8594" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#0CD38B"/>
-                        <stop offset="1" stop-color="#0CB477"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                  <text class="delivery__text delivery__text_2">Обратная доставка товаров на склад при отказе —</text>
-                  <span class="delivery__text delivery__free">бесплатно</span>
+                <img class="delivery__svg" src='https://raw.githubusercontent.com/Pavel-174/WB-L0/fa660bf8708e20fd8f9a082583cc25af13b8036b/src/images/shipping.svg' alt="checked round">
+                <div>
+                    <text class="delivery__text delivery__text_2">Обратная доставка товаров на склад при отказе —</text>
+                    <span class="delivery__text delivery__free">бесплатно</span>
+                </div>
             </div>
         </div>        
     </section>
@@ -98,24 +86,11 @@
             <button class="payment__button">Изменить</button>
         </div>
         <div class="payment__box">
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 30 10" fill="none">
-                <path d="M16.6812 1.84383L14.8644 5.75836H14.6805V1.00037H12.0851V9.00245H14.2372C14.8211 9.00245 15.3402 8.66723 15.5889 8.14817L17.4166 4.24445H17.6004V9.00245H20.1958V1.00037H18.0113C17.449 1.00037 16.9191 1.33559 16.6812 1.84383Z" fill="#319B42"/>
-                <path d="M6.97242 2.04929L5.90181 5.75836H5.71797L4.63654 2.04929C4.4527 1.4221 3.87954 1.00037 3.23069 1.00037H0.667709V9.00245H3.26313V4.24445H3.44697L4.93934 9.00245H6.66962L8.16199 4.24445H8.34583V9.00245H10.9412V1.00037H8.37827C7.72942 1.00037 7.14545 1.4221 6.97242 2.04929Z" fill="#319B42"/>
-                <path d="M21.3243 4.56745V9.00245H23.9206V6.40635H26.7116C27.9231 6.40635 28.9508 5.63834 29.3294 4.56745H21.3243Z" fill="#319B42"/>
-                <path d="M26.6357 1.00037H20.859C21.216 2.90417 22.8819 4.24549 24.8832 4.24549H29.3726C29.405 4.07241 29.4267 3.87771 29.4267 3.683C29.4267 2.13616 28.1826 1.00037 26.6357 1.00037Z" fill="url(#paint0_linear_2_3460)"/>
-                <defs>
-                  <linearGradient id="paint0_linear_2_3460" x1="20.859" y1="2.62293" x2="29.4267" y2="2.62293" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#00A3E1"/>
-                    <stop offset="0.3042" stop-color="#009ADD"/>
-                    <stop offset="0.7987" stop-color="#0082D4"/>
-                    <stop offset="1" stop-color="#0076CF"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <span class="payment__span">1234 56•• •••• 1234</span>
-              <span class="payment__span payment__span_2">01/30</span>
+            <img class="payment__mir" src="https://raw.githubusercontent.com/Pavel-174/WB-L0/d07d655a4d42549b36d65e63a6418420656aca5a/src/images/mir.svg" alt='logo mir'>
+            <span class="payment__span">1234 56•• •••• 1234</span>
+            <span class="payment__span payment__span_2">01/30</span>
         </div>
-        <text class="payment__text">Спишем оплату с карты при получении</text>
+        <span class="payment__text">Спишем оплату с карты при получении</span>
     </section>
 
     <section class="buyer">
@@ -160,49 +135,57 @@
             <span class="result__header-span"></span>
         </div>
         <div class="result__box">
-            <span class="result__quantity"></span>
-            <span class="result__full-price"></span>
+            <span class="result__span result__span_quantity"></span>
+            <span class="result__span result__span_full-price"></span>
         </div>
         <div class="result__box">
-            <span>Скидка</span>
-            <span class="result__discount"></span>
+            <span class="result__span">Скидка</span>
+            <span class="result__span result__span_discount"></span>
         </div>
         <div class="result__box">
-            <span>Доставка</span>
-            <span>Бесплатно</span>
+            <span class="result__span">Доставка</span>
+            <span class="result__span">Бесплатно</span>
         </div>
         <div class="result__box">
-            <h4>Доставка в пункт выдачи</h4>
-            <button></button>
+            <h4 class="result__header-4">Доставка в пункт выдачи</h4>
+            <button class="result__button-pencil"></button>
         </div>
-        <span>Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
-        <span>5–8 фев</span>
-        
+        <span class="result__span">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
+        <span class="result__span result__span_date">5–8 фев</span>
         <div class="result__delivery-box">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M1 10.9998C1 16.5226 5.47715 20.9998 11 20.9998C16.5228 20.9998 21 16.5226 21 10.9998C21 5.47691 16.5228 0.999756 11 0.999756C5.47715 0.999756 1 5.47691 1 10.9998ZM19.1818 10.9997C19.1818 15.5184 15.5187 19.1816 11 19.1816C6.48128 19.1816 2.81815 15.5184 2.81815 10.9997C2.81815 6.48103 6.48128 2.81791 11 2.81791C15.5187 2.81791 19.1818 6.48103 19.1818 10.9997Z" fill="url(#paint0_linear_2_4157)"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.98273 9.6548C7.40206 9.29538 8.03336 9.34394 8.39278 9.76327L10.6286 12.3717L14.6826 7.58061C15.0394 7.15901 15.6704 7.10643 16.092 7.46317C16.5136 7.81991 16.5662 8.45089 16.2094 8.8725L11.7761 14.1118C11.1795 14.817 10.0933 14.8204 9.49219 14.1191L6.87427 11.0648C6.51485 10.6455 6.56341 10.0142 6.98273 9.6548Z" fill="url(#paint1_linear_2_4157)"/>
-                <defs>
-                  <linearGradient id="paint0_linear_2_4157" x1="4" y1="1.99994" x2="11" y2="20.9998" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#0CD38B"/>
-                    <stop offset="1" stop-color="#0CB477"/>
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_2_4157" x1="9" y1="7.5" x2="10.5089" y2="15.8594" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#0CD38B"/>
-                    <stop offset="1" stop-color="#0CB477"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-              <div class="result__delivery">
-                <text>Обратная доставка товаров на склад при отказе —</text>
-                <span>бесплатно</span>
-              </div>
+            <div class="result__delivery">
+                <img class="result__svg" src='https://raw.githubusercontent.com/Pavel-174/WB-L0/fa660bf8708e20fd8f9a082583cc25af13b8036b/src/images/shipping.svg' alt="checked round">
+                <div class="result__text-box">
+                    <span class="result__span">Обратная доставка товаров на склад при отказе —</span>
+                    <span class="result__span result__span_free">бесплатно</span>
+                </div>
+            </div>
         </div>
         <div class="result__box">
-            <h4>Доставка в пункт выдачи</h4>
-            <button></button>
+            <h4 class="result__header-4">Оплата картой</h4>
+            <button class="result__button-pencil"></button>
         </div>
-        <button class="result__button" type="submit"></button>
+        <div class="result__payment">
+            <img class="result__mir" src="https://raw.githubusercontent.com/Pavel-174/WB-L0/d07d655a4d42549b36d65e63a6418420656aca5a/src/images/mir.svg" alt="лого мир">
+            <span class="payment__span">1234 56•• •••• 1234</span>
+        </div>
+        <div class="result__delivery-box">
+              <div class="result__delivery">
+                <label class="basket__label">
+                    <input class="basket__checkbox" type="checkbox" checked="true" value="1">
+                    <span></span>
+                </label>
+                <text>Списать оплату сразу</text>
+              </div>
+              <text>Спишем оплату с карты при получении</text>
+        </div>
+        <button class="result__button" type="submit">Заказать</button>
+        <div class="result__text-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="24" viewBox="0 0 13 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7657 4.68031L4.59586 13.4814L0.257324 8.66919L1.74276 7.32998L4.6174 10.5185L11.2999 3.31964L12.7657 4.68031Z" fill="black"/>
+            </svg>
+            <text>Соглашаюсь с правилами пользования торговой площадкой и возврата</text>
+        </div>
     </section>
     </div>
 </main>
@@ -294,7 +277,5 @@
         </li>
     </template>
 
-    <!-- <script src="./utils/cards.js"></script>
-    <script type="module" src="./pages/index.js"></script> -->
 </body>
 </html>
