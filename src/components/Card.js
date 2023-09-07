@@ -158,9 +158,10 @@ export default class Card {
     //добавить колличество заказываемых товаров
     _incrementQuantity() {
       this._buyQuantity = this._buyQuantity + 1;
-      console.log(this._buyQuantity);
       this._cardQuantity.textContent = this._buyQuantity;
+
       this._toggleButtonsCondition();
+      
       this._deliveryQuantity2 > 0 ? this._deliveryQuantity2 = this._deliveryQuantity2 + 1 : this._deliveryQuantity2;
       this._deliveryQuantity2 == 0 || '' ? this._deliveryQuantity = this._deliveryQuantity + 1 : this._deliveryQuantity;
       
