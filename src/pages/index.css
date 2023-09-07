@@ -80,7 +80,8 @@
 @import url(../blocks/delivery/__card-image/delivery__card-image.css);
 @import url(../blocks/delivery/__free/delivery__free.css);
 @import url(../blocks/delivery/__quantity/delivery__quantity.css);
-@import url(../blocks/delivery/__quantity/_hidden/delivery__quantity_hidden.css);
+@import url(../blocks/delivery/__svg/delivery__svg.css);
+@import url(../blocks/delivery/delivery.css);
 
 @import url(../blocks/payment/payment.css);
 @import url(../blocks/payment/__header-box/payment__header-box.css);
