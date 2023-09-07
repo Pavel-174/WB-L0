@@ -63,6 +63,7 @@
 @import url(../blocks/basket/__mistake/basket__mistake.css);
 
 @import url(../blocks/delivery/delivery.css);
+@import url(../blocks/delivery/__cards/delivery__cards.css);
 @import url(../blocks/delivery/__header-box/delivery__header-box.css);
 @import url(../blocks/delivery/__header/delivery__header.css);
 @import url(../blocks/delivery/__button/delivery__button.css);

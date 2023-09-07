@@ -87,6 +87,10 @@
     color: rgba(203, 17, 171, 1);
 }
 
+.result__span_free {
+    color: rgba(12, 180, 119, 1);
+}
+
 .result__header-4 {
     margin: 24px 0 0 0;
     color: rgba(0, 0, 0, 1);
